@@ -1,5 +1,4 @@
-
-import { Button } from './components/ui/button'
+import { Button } from './components/ui/button';
 import {
   Card,
   CardContent,
@@ -7,36 +6,29 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from '@/components/ui/card';
 
 function App() {
-
-
   return (
     <>
-      
-       
-        <Button> Hello shadCN UI app</Button>
-        
-     
-    
-      <div className='p-5'>
-      <Card>
-  <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
-  </CardContent>
-  <CardFooter>
-    <p>Card Footer</p>
-  </CardFooter>
-</Card>
+      <Button size='sm'> Hello shadCN UI app</Button>
 
+      <div className='p-5'>
+        <Card>
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>Card Content</p>
+          </CardContent>
+          <CardFooter>
+            <p>Card Footer</p>
+          </CardFooter>
+        </Card>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
