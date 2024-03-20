@@ -13,16 +13,16 @@ function Course() {
         </div>
 
         <div className='xl:max-w-xl xl:pr-[4rem] xl:mt-6  md:p-6'>
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center gap-[0.592rem]'>
             <div className='border-b-4 border-[#EB414B] w-6 mt-1'></div>
-            <p className='className="text-[#151515] text-lg'>Courses</p>
+            <p className='text-[#EB414B] text-lg'>Courses</p>
           </div>
 
-          <h3 className='mt-3.5 font-bold text-3xl text-[#15151]'>
+          <h3 className='mt-3.5 font-bold text-3xl text-[#0F405A]'>
             YOUR SUPPORT IS
-            <span className='text-[#FF5309]'> REALLY POWERFUL.</span>
+             REALLY POWERFUL.
           </h3>
-          <p className='mt-8 text-base'>
+          <p className='mt-8 text-base text-[#0F405A]'>
             Sociis aute euismod, vulputate. Porta amet Tortor nibh wisi saepe,
             facere dapibus necessitatibus voluptatum eos faucibus, mollit quod
             quo voluptatem. Cillum potenti, consequuntur cupiditate perferendis
