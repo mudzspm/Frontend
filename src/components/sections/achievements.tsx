@@ -1,26 +1,53 @@
+import Slider from 'react-slick';
+
 function Achievements() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+  };
   return (
-    <section className='2xl:px-52 xl:px-32 lg:px-24 md:px-12 px-6 text-center justify-center mt-[4.509rem] '>
-      <h2 className='text-[#0F405A] xl:text-5xl lg:text-4xl text-3xl font-semibold'>
-        Our  Achievements 
+    <section className='mb-16 2xl:px-52 xl:px-32 lg:px-24 md:px-12 px-6 text-center justify-center mt-[4.509rem] '>
+      <h2 className='text-[#0F405A] xl:text-6xl lg:text-4xl text-3xl font-semibold'>
+        Our Achievements
       </h2>
-      <p className='text-xl font-medium text-[#0F405A] mt-3.5'>
+      <p className='text-xl font-medium text-[#0F405A] mt-3.5 mb-[4.1rem]'>
         Proof that we are committed to providing the best service for you
       </p>
-      <div className="mt-[4.176rem]">
-      <img src="achievement.png" alt="Achievement" className="max-w-full"/>
-      </div>
 
-      <div className="text-center flex justify-center mt-[1.444rem]">
-        {/* <img src="swipe.svg" alt="Swipe" /> */}
-
-        <div className='flex items-center gap-[0.592rem]'>
-        <div className="w-[1.5rem] h-[1.5rem] bg-[#D9D9D9] rounded-full"></div>
-        <div className="w-[1.5rem] h-[1.5rem] bg-[#0F405A] rounded-full"></div>
-        <div className="w-[1.5rem] h-[1.5rem] bg-[#D9D9D9] rounded-full"></div>
-        <div className="w-[1.5rem] h-[1.5rem] bg-[#D9D9D9] rounded-full"></div>
-          </div>
-      </div>
+      <Slider {...settings}>
+        <div className=''>
+          <img
+            src='placeholder.png'
+            alt='Achievement'
+            className='w-full mr-5'
+          />
+        </div>
+        <div>
+          <img
+            src='placeholder.png'
+            alt='Achievement'
+            className='w-full mr-5'
+          />
+        </div>
+        <div>
+          <img
+            src='placeholder.png'
+            alt='Achievement'
+            className='w-full mr-5'
+          />
+        </div>
+        <div>
+          <img src='placeholder.png' alt='Achievement' className='w-full' />
+        </div>
+      </Slider>
     </section>
   );
 }
