@@ -1,5 +1,5 @@
 // import volunteer1 from '../../assets/familySupport.png';
-import { Button } from '../ui/button';
+import { Button } from '../../../components/ui/button';
 function Services() {
   return (
     <section className='2xl:px-52 xl:px-32 lg:px-24 md:px-12 px-6 xl:mt-[5rem] lg:mt-[5rem] mb-20'>

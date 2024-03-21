@@ -1,5 +1,5 @@
-import familySupport from '../../assets/familySupport.png';
-import heart from '../../assets/heart.png';
+import familySupport from '../../../assets/familySupport.png';
+import heart from '../../../assets/heart.png';
 function Course() {
   return (
     <section className='2xl:px-52 xl:px-32 lg:px-24 md:px-12 px-6 xl:mt-[5rem] lg:mt-[5rem]'>

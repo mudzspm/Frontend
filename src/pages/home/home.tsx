@@ -1,11 +1,11 @@
-import Trust from '@/components/sections/trust';
-import Hero from '@/components/sections/hero';
-import Course from '@/components/sections/course';
-import Achievements from '@/components/sections/achievements';
+import Trust from '@/pages/home/sections/trust';
+import Hero from '@/pages/home/sections/hero';
+import Course from '@/pages/home/sections/course';
+import Achievements from '@/pages/home/sections/achievements';
 import PageWrapper from '@/components/ui/PageWrapper';
-import QurbanService from '@/components/sections/qurbanServicebanner';
-import Services from '@/components/sections/Services';
-import Footer from '@/components/ui/footer';
+import QurbanService from '@/pages/home/sections/qurbanServicebanner';
+import Services from '@/pages/home/sections/Services';
+
 export const Home = () => {
   return (
     <PageWrapper>
@@ -15,7 +15,6 @@ export const Home = () => {
       <Achievements />
       <QurbanService />
       <Services />
-      <Footer />
     </PageWrapper>
   );
 };
