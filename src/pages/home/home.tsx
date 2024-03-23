@@ -1,9 +1,15 @@
 
+import Hero from '@/components/hero/hero';
 import PriceCard from '../../components/priceCard/priceCard';
 
  const Home = () => {
   return (
     <>
+      <div>
+        <Hero />
+      </div>
+
+
     <div className="text-center mt-[13.063rem]">
 
         <h3 className="xl:text-[4rem] lg:text-4xl text-3xl text-[#084059] font-bold">
@@ -27,7 +33,7 @@ import PriceCard from '../../components/priceCard/priceCard';
 
       <div>
         
-              <div className='relative mt-[13.375rem] h-[18.125rema ] bg-[#00ADB96B] py-[2rem]'>
+              <div className='relative mt-[13.375rem] h-[18.125rem] bg-[#00ADB96B] py-[2rem]'>
         <img
           src='qurban-.png'
           alt='Aqiqah'
