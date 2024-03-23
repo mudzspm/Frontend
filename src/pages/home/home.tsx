@@ -1,6 +1,12 @@
 
 import Hero from '@/components/hero/hero';
 import PriceCard from '../../components/priceCard/priceCard';
+import Support from '@/components/support/support';
+import QurbanServiceBanner from '@/components/qurbanService/qurbanService';
+import Trust from '@/components/trust/trust';
+import Services from '@/components/services/services';
+import QuestionForm from '@/components/questionForm/questionForm';
+
 
  const Home = () => {
   return (
@@ -15,7 +21,7 @@ import PriceCard from '../../components/priceCard/priceCard';
         <h3 className="xl:text-[4rem] lg:text-4xl text-3xl text-[#084059] font-bold">
           Let’s Start By Choosing A Package
 </h3>
-        <p className="text-[1.5rem] text-[#000000] font-light mt-[1.438rem]">
+        <p className="text-[1.5rem] text-[#000000] font-light mt-[1.538rem]">
           Available Payment Methods
         </p>
         <div className="justify-center items-center flex">
@@ -43,9 +49,40 @@ import PriceCard from '../../components/priceCard/priceCard';
       </div>
       </div>
 
+      <div>
+        <Support />
+      </div>
+      <div>
+                  <QurbanServiceBanner />
+              </div>
 
+              <div className='mt-[15.625rem]'>
+                  <Trust />
+              </div>
+
+
+              <div className='mt-[3.375rem]'>
+                  <Services />
+      </div>
       
-    
+      <div className='mt-[22.125rem]'>
+
+        <h2 className='text-center xl:text-[4rem] lg:text-4xl text-3xl text-[#084059]'>
+          In Collaboration With
+        </h2>
+        <div className='bg-[#E6F7F8] flex justify-center xl:flex-row flex-col  p-[6.813rem] gap-[2.625rem] mt-[3rem]'>
+          <img src="ilum.svg" alt="" />
+          <img src="upm.svg" alt="" />
+          <img src="ppz.svg" alt="" />
+          <img src="haji.svg" alt="" />
+          <img src="ppz-.svg" alt="" />
+        </div>
+      </div>
+      
+      <div className='mt-[18.625rem]'>
+        <QuestionForm />
+  </div>
+
     </>
   )
 }
