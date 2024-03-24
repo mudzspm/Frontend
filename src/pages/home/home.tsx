@@ -9,9 +9,7 @@ import QuestionForm from '@/components/questionForm/questionForm';
 const Home = () => {
   return (
     <>
-      <div>
-        <Hero />
-      </div>
+      <Hero />
 
       <div className='text-center mt-[13.063rem]'>
         <h3 className='xl:text-[4rem] lg:text-4xl text-3xl text-[#084059] font-bold'>
