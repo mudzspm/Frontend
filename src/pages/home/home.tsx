@@ -1,4 +1,4 @@
-import Hero from '@/pages/home/hero';
+import Hero from '@/pages/home/sections/hero';
 import PriceCard from './sections/priceCard';
 import Support from '@/pages/home/sections/support';
 import QurbanServiceBanner from '@/pages/home/sections/qurbanService';
