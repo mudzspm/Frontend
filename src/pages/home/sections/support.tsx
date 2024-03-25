@@ -1,4 +1,4 @@
-import SupportCard from '../supportCard/supportCard';
+import SupportCard from './supportCard';
 
 const Support = () => {
   const imagesAnimals = [
@@ -46,16 +46,16 @@ const Support = () => {
                 religious obligations.
               </p>
             </div>
-            <div className=' ml-auto '>
+            <div className=' ml-auto mt-[6.5rem]'>
               <div className=' flex justify-end gap-[1.125rem]'>
                 <p className='text-[#FFFFFF]'>Find out more</p>
                 <img src='FindArrow.svg' alt='Arrow' className='mr-[1rem]' />
               </div>
               <div className=' flex justify-end gap-[1.125rem] '>
                 <SupportCard />
+                {/* <SupportCard />
                 <SupportCard />
-                <SupportCard />
-                <SupportCard />
+                <SupportCard /> */}
               </div>
             </div>
           </div>
