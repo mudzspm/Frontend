@@ -1,10 +1,10 @@
-import Hero from '@/components/hero/hero';
-import PriceCard from '../../components/priceCard/priceCard';
-import Support from '@/components/support/support';
-import QurbanServiceBanner from '@/components/qurbanService/qurbanService';
-import Trust from '@/components/trust/trust';
-import Services from '@/components/services/services';
-import QuestionForm from '@/components/questionForm/questionForm';
+import Hero from '@/pages/home/sections/hero';
+import PriceCard from './sections/priceCard';
+import Support from '@/pages/home/sections/support';
+import QurbanServiceBanner from '@/pages/home/sections/qurbanService';
+import Trust from '@/pages/home/sections/trust';
+import Services from '@/pages/home/sections/services';
+
 
 const Home = () => {
   return (
@@ -13,9 +13,9 @@ const Home = () => {
 
       <div className='text-center mt-[13.063rem]'>
         <h3 className='xl:text-[4rem] lg:text-4xl text-3xl text-[#084059] font-bold'>
-          Let’s Start By Choosing A Package
+          Choose A Package
         </h3>
-        <p className='text-[1.5rem] text-[#000000] font-light mt-[1.538rem]'>
+        <p className='text-[1.5rem] text-[#000000] font-light mt-[1.438rem]'>
           Available Payment Methods
         </p>
         <div className='justify-center items-center flex'>
@@ -24,6 +24,7 @@ const Home = () => {
       </div>
 
       <div className='flex justify-center items-center flex-col xl:gap-8 mt-[7.313rem] xl:flex-row p-4'>
+       
         <PriceCard />
         <PriceCard />
       </div>
@@ -46,7 +47,7 @@ const Home = () => {
       </div>
 
       <div className='mt-[15.625rem]'>
-        <Trust />
+        {/* <Trust /> */}
       </div>
 
       <div className='mt-[3.375rem]'>
@@ -67,7 +68,7 @@ const Home = () => {
       </div>
 
       <div className='mt-[18.625rem]'>
-        <QuestionForm />
+        {/* <QuestionForm /> */}
       </div>
     </>
   );
