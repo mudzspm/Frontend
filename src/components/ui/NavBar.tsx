@@ -1,54 +1,64 @@
 import { Link } from 'react-router-dom';
-import {
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from '@/components/ui/menubar';
-function NavBar() {
+import { Dropdown, Navbar, Sidebar, CustomFlowbiteTheme } from 'flowbite-react';
+import { useState } from 'react';
+
+const customSideBar: CustomFlowbiteTheme['sidebar'] = {
+  root: {
+    inner: 'bg-transparent',
+  },
+  item: {
+    base: 'text-xl',
+  },
+};
+
+function NavigationBar() {
+  const [show, setShow] = useState(false);
+
+  const handleSideBar = () => setShow((prev) => !prev);
+
   return (
-    <header className='shadow-lg right-0 bg-white dark:bg-gray-900 fixed w-full z-20  start-0 border-b border-gray-200 dark:border-gray-600'>
-      <div className='bg-[#0F405A] p-[5px] text-white hidden lg:block'>
-        <div className='max-w-[71.3rem] mx-auto flex text-base font-normal 2xl:justify-between md:justify-around'>
-          <div className='flex'>
-            <img src='heart.svg' alt='heart' className='mr-1' />
-            <p>Helping tomorrow</p>
-          </div>
-          <div className='flex gap-1'>
-            <a
-              href='mailto:info@digiqurban.org'
-              className='border-r-[1px] border-[#8A8A8A] pr-3 inline-block'
-            >
-              Email: info@digiqurban.org
-            </a>
-            <a href='tel:1-800-885-885' className='inline-block pl-3'>
-              Phone: 1-800-885-885
-            </a>
-          </div>
-          <div className='flex gap-[18.8px]'>
-            <p>Social network</p>
-            <div className='flex items-center gap-6'>
-              <a href='#' className='inline-block'>
-                <img src='facebook.svg' alt='facebook' />
+    <>
+      <header
+        className={`${
+          show
+            ? "before:opacity-25 before:content-[''] before:absolute before:bg-black before:w-full before:h-screen"
+            : ''
+        } shadow-lg right-0 bg-white dark:bg-gray-900 fixed w-full z-20  start-0 border-b border-gray-200 dark:border-gray-600`}
+      >
+        <div className='bg-[#0F405A] p-[5px] text-white hidden lg:block'>
+          <div className='max-w-[71.3rem] mx-auto flex text-base font-normal 2xl:justify-between md:justify-around'>
+            <div className='flex'>
+              <img src='heart.svg' alt='heart' className='mr-1' />
+              <p>Helping tomorrow</p>
+            </div>
+            <div className='flex gap-1'>
+              <a
+                href='mailto:info@digiqurban.org'
+                className='border-r-[1px] border-[#8A8A8A] pr-3 inline-block'
+              >
+                Email: info@digiqurban.org
               </a>
-              <a href='#' className='inline-block'>
-                <img src='twiter.svg' alt='twitter' />
+              <a href='tel:1-800-885-885' className='inline-block pl-3'>
+                Phone: 1-800-885-885
               </a>
-              <a href='#' className='inline-block'>
-                <img src='yt.svg' alt='facebook' />
-              </a>
+            </div>
+            <div className='flex gap-[18.8px]'>
+              <p>Social network</p>
+              <div className='flex items-center gap-6'>
+                <a href='#' className='inline-block'>
+                  <img src='facebook.svg' alt='facebook' />
+                </a>
+                <a href='#' className='inline-block'>
+                  <img src='twiter.svg' alt='twitter' />
+                </a>
+                <a href='#' className='inline-block'>
+                  <img src='yt.svg' alt='facebook' />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <nav className=''>
-        <div className='flex max-w-[94rem] mx-auto flex-wrap items-center justify-between p-3'>
+        <Navbar className='flex max-w-[94rem] mx-auto flex-wrap items-center justify-between p-3'>
           <Link
             to='#'
             className='flex items-center space-x-3 rtl:space-x-reverse'
@@ -68,10 +78,12 @@ function NavBar() {
             >
               <img src='user-detail.svg' className='h-8 w-8' alt='digi user' />
             </Link>
+
             <button
-              data-collapse-toggle='navbar-sticky'
+              onClick={handleSideBar}
+              data-drawer-toggle='default-sidebar'
               type='button'
-              className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+              className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500  md:hidden  '
               aria-controls='navbar-sticky'
               aria-expanded='false'
             >
@@ -94,70 +106,115 @@ function NavBar() {
             </button>
           </div>
           <div
-            className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ml-auto mr-10'
+            className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ml-auto mr-2'
             id='navbar-sticky'
           >
-            <Menubar className='border-none text-xl'>
-              <MenubarMenu>
-                <MenubarTrigger className='text-xl bg-transparent hover:text-[#00ADB9] font-normal'>
-                  <Link to='/'>Home</Link>
-                </MenubarTrigger>
-              </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger className='text-xl bg-transparent hover:text-[#00ADB9] font-normal'>
-                  Package
-                </MenubarTrigger>
-                <MenubarContent className='flex flex-col items-center border-none bg-[#fafafa] top-5'>
-                  <MenubarItem>
-                    <Link to='#'>Qurban</Link>
-                  </MenubarItem>
-                  <MenubarItem>
-                    <Link to='#'>Aqiqah</Link>
-                  </MenubarItem>
-                </MenubarContent>
-              </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger>View</MenubarTrigger>
-                <MenubarContent>
-                  <MenubarCheckboxItem>
-                    Always Show Bookmarks Bar
-                  </MenubarCheckboxItem>
-                  <MenubarCheckboxItem checked>
-                    Always Show Full URLs
-                  </MenubarCheckboxItem>
-                  <MenubarSeparator />
-                  <MenubarItem inset>
-                    Reload <MenubarShortcut>⌘R</MenubarShortcut>
-                  </MenubarItem>
-                  <MenubarItem disabled inset>
-                    Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
-                  </MenubarItem>
-                  <MenubarSeparator />
-                  <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-                  <MenubarSeparator />
-                  <MenubarItem inset>Hide Sidebar</MenubarItem>
-                </MenubarContent>
-              </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger>Profiles</MenubarTrigger>
-                <MenubarContent>
-                  <MenubarRadioGroup value='benoit'>
-                    <MenubarRadioItem value='andy'>Andy</MenubarRadioItem>
-                    <MenubarRadioItem value='benoit'>Benoit</MenubarRadioItem>
-                    <MenubarRadioItem value='Luis'>Luis</MenubarRadioItem>
-                  </MenubarRadioGroup>
-                  <MenubarSeparator />
-                  <MenubarItem inset>Edit...</MenubarItem>
-                  <MenubarSeparator />
-                  <MenubarItem inset>Add Profile...</MenubarItem>
-                </MenubarContent>
-              </MenubarMenu>
-            </Menubar>
+            <div className='flex md:order-2'>
+              <Navbar.Collapse>
+                <Navbar.Link
+                  className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
+                  href='#'
+                  active
+                >
+                  Home
+                </Navbar.Link>
+
+                <Dropdown
+                  inline
+                  label={<p className='text-xl font-normal'>Packages</p>}
+                  className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
+                >
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                    Qurban
+                  </Dropdown.Item>
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                    Aqiqah
+                  </Dropdown.Item>
+                </Dropdown>
+                <Navbar.Link
+                  className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
+                  href='#'
+                >
+                  FeedLot
+                </Navbar.Link>
+                <Dropdown
+                  inline
+                  label={<p className='text-xl font-normal'>Information</p>}
+                  className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
+                >
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                    About Us
+                  </Dropdown.Item>
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                    Yayasan Ar-Rahman
+                  </Dropdown.Item>
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                    Institute Ar-Rahman
+                  </Dropdown.Item>
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                    Contact Us
+                  </Dropdown.Item>
+                </Dropdown>
+              </Navbar.Collapse>
+              <Navbar.Toggle />
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </Navbar>
+      </header>
+
+      <div
+        id='drawer-backdrop'
+        data-drawer-backdrop='true'
+        className={` bg-transparent fixed bottom-0 w-72 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 transform ${
+          show ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        aria-labelledby='drawer-bottom-label'
+      >
+        <button
+          type='button'
+          onClick={handleSideBar}
+          data-drawer-hide='drawer-bottom-example'
+          aria-controls='drawer-bottom-example'
+          className='text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white'
+        >
+          <svg
+            className='w-3 h-3'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 14 14'
+          >
+            <path
+              stroke='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
+            />
+          </svg>
+          <span className='sr-only'>Close menu</span>
+        </button>
+        <Sidebar theme={customSideBar} className='bg-transparent'>
+          <Sidebar.Items>
+            <Sidebar.ItemGroup className='bg-transparent'>
+              <Sidebar.Item href='#'>Home</Sidebar.Item>
+              <Sidebar.Collapse label='Packages'>
+                <Sidebar.Item href='#'>Qurban</Sidebar.Item>
+                <Sidebar.Item href='#'>Aqiqah</Sidebar.Item>
+              </Sidebar.Collapse>
+              <Sidebar.Item href='#'>FeedLot</Sidebar.Item>
+              <Sidebar.Collapse label='Information'>
+                <Sidebar.Item href='#'>About Us</Sidebar.Item>
+                <Sidebar.Item href='#'>Yayasan Ar-Rahman</Sidebar.Item>
+                <Sidebar.Item href='#'>Institute Ar-Rahman</Sidebar.Item>
+                <Sidebar.Item href='#'>Contact Us</Sidebar.Item>
+              </Sidebar.Collapse>
+            </Sidebar.ItemGroup>
+          </Sidebar.Items>
+        </Sidebar>
+      </div>
+    </>
   );
 }
 
-export default NavBar;
+export default NavigationBar;
