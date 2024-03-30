@@ -3,20 +3,20 @@ import SupportCard from './supportCard';
 const Support = () => {
   const imagesAnimals = [
     {
-      src: 'animal-',
+      src: 'animal-.png',
       alt: '',
     },
 
     {
-      src: 'farm-',
+      src: 'farm-.png',
       alt: 'Farm',
     },
     {
-      src: 'animal-2',
+      src: 'animal-2.png',
       alt: 'Aninal',
     },
     {
-      src: 'farm-2',
+      src: 'farm-2.png',
       alt: 'Farm',
     },
   ];
@@ -52,18 +52,13 @@ const Support = () => {
                 <img src='FindArrow.svg' alt='Arrow' className='mr-[1rem]' />
               </div>
               <div className=' flex justify-end gap-[1.125rem] '>
-                <SupportCard />
-                {/* <SupportCard />
-                <SupportCard />
-                <SupportCard /> */}
+                {imagesAnimals.map(({ src }) => (
+                  <SupportCard image={src} />
+                ))}
               </div>
             </div>
           </div>
         </div>
-
-        {/* <div className="mt-[7.813rem] mx-auto max-w-[120rem] justify-center item-center text-center">
-                  <Timer />
-              </div> */}
       </section>
     </>
   );

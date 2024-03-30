@@ -1,120 +1,75 @@
+import { Button } from './button';
+
 function Footer() {
   return (
-    <footer className='bg-[#0F405A]'>
-      <div className=' mx-auto w-full max-w-screen-xl'>
-        <div className='border-b-[0.8px]  border-[#01ACBC] text-white grid grid-cols-2  py-6 lg:py-8 md:grid-cols-4'>
-          <div>
-            <h2 className='mb-6 text-sm font-semibold  uppercase dark:text-white'>
-              Quick links
-            </h2>
-            <ul className='font-normal'>
-              <li className='mb-4'>
-                <a href='#' className=' hover:underline'>
-                  About us
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Portfolio
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Blog
-                </a>
-              </li>
-            </ul>
+    <footer className='bg-[#0F405A] pt-52 pb-32'>
+      <div className='max-w-[78.375rem] mx-auto font-bold flex justify-between'>
+        <div className='flex flex-col gap-12'>
+          <h2 className='text-4xl text-white'>
+            Having trouble with our service? <br /> Talk to us!
+          </h2>
+          <div className='flex'>
+            <div className='flex flex-col p-4 gap-5 w-full'>
+              <h2 className='text-xl text-white font-bold'>Quick links</h2>
+              <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+                <li>About us</li>
+                <li>Portfolio</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+            <div className='flex flex-col p-4 gap-5 w-full'>
+              <h2 className='text-xl text-white font-bold'>Explore</h2>
+              <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+                <li>Pages</li>
+                <li>Events</li>
+                <li>Shop</li>
+              </ul>
+            </div>
+            <div className='flex flex-col p-4 gap-5 w-full'>
+              <h2 className='text-xl text-white font-bold'>Get in touch</h2>
+              <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+                <li>Locations</li>
+                <li>Media</li>
+                <li>Contact us</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase dark:text-white'>
-              Explore
-            </h2>
-            <ul className='font-normal'>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Pages
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Events
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Shops
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase dark:text-white'>
-              Get in touch
-            </h2>
-            <ul className='font-normal'>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Locations
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Media
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className='text-white ml-auto flex flex-col gap-5'>
-            <img
-              src='logo.svg'
-              alt='digi qurban'
-              className='h-auto w-44 ml-auto'
-            />
+        </div>
+        <div className='text-center text-[#A3A3A3] font-normal'>
+          <img src='footer-logo.svg' alt='digi qurban' />
+          <p>© All right reserved 2024 DigiQurban</p>
+        </div>
+      </div>
 
-            <ul className='flex gap-3 justify-end'>
-              <li>
-                <a href='#'>
-                  <img src='fb.svg' alt='facebook' />
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <img src='instagram.svg' alt='instagram' />
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <img src='twitter.svg' alt='twitter' />
-                </a>
-              </li>
-            </ul>
-            <p>© All right reserved 2024 DigiQurban</p>
-          </div>
+      <div className='max-w-[78.375rem] mx-auto flex justify-between'>
+        <div className='flex gap-[10px] justify-normal'>
+          <Button
+            size='sm'
+            className='bg-[#00ADB9] font-normal hover:bg-[#31a8b1]'
+          >
+            Log in Breeder
+          </Button>
+          <Button size='sm' className='bg-[#00ADB9] hover:bg-[#31a8b1]'>
+            Log in Executor
+          </Button>
         </div>
-        <div className='py-6 text-white dark:bg-gray-700 md:flex md:items-center md:justify-between'>
-          <p className='flex-1'>
-            Provident primis, incididunt nihil, voluptate vero fugiat laboris
-            scelerisque lobortis labore aliquip, dis pretium cupidatat iure
-            iaculis adipisicing aspernatur potenti voluptatibus omnis pharetra
-            eugiat quod commodo nesciunt.
-          </p>
-          <div className='flex self-start  mt-4 sm:justify-end md:mt-0 space-x-5 rtl:space-x-reverse flex-1'>
-            <a href='#' className='hover:underline'>
-              Policies
+        <ul className='flex gap-3 '>
+          <li>
+            <a href='#'>
+              <img src='fb.svg' alt='facebook' />
             </a>
-            <a href='#' className='hover:underline'>
-              Terms of use
+          </li>
+          <li>
+            <a href='#'>
+              <img src='instagram.svg' alt='instagram' />
             </a>
-            <a href='#' className='hover:underline'>
-              Privacy
+          </li>
+          <li>
+            <a href='#'>
+              <img src='twitter.svg' alt='twitter' />
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </footer>
   );

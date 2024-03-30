@@ -9,6 +9,17 @@ const customSideBar: CustomFlowbiteTheme['sidebar'] = {
   item: {
     base: 'text-xl',
   },
+  // collapse: {
+  //   base: 'text-xl',
+  // },
+};
+
+const customDropdown: CustomFlowbiteTheme['dropdown'] = {
+  floating: {
+    item: {
+      base: 'hover:bg-transparent text-xl mb-5 px-3',
+    },
+  },
 };
 
 function NavigationBar() {
@@ -120,14 +131,15 @@ function NavigationBar() {
                 </Navbar.Link>
 
                 <Dropdown
+                  theme={customDropdown}
                   inline
                   label={<p className='text-xl font-normal'>Packages</p>}
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
                 >
-                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
                     Qurban
                   </Dropdown.Item>
-                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
+                  <Dropdown.Item className=' hover:bg-transparent hover:text-[#00ADB9] text-xl font-normal'>
                     Aqiqah
                   </Dropdown.Item>
                 </Dropdown>
@@ -138,6 +150,7 @@ function NavigationBar() {
                   FeedLot
                 </Navbar.Link>
                 <Dropdown
+                  theme={customDropdown}
                   inline
                   label={<p className='text-xl font-normal'>Information</p>}
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
@@ -198,7 +211,7 @@ function NavigationBar() {
           <Sidebar.Items>
             <Sidebar.ItemGroup className='bg-transparent'>
               <Sidebar.Item href='#'>Home</Sidebar.Item>
-              <Sidebar.Collapse label='Packages'>
+              <Sidebar.Collapse className='text-xl' label='Packages'>
                 <Sidebar.Item href='#'>Qurban</Sidebar.Item>
                 <Sidebar.Item href='#'>Aqiqah</Sidebar.Item>
               </Sidebar.Collapse>
