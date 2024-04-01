@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import Packages from './pages/packages/packages.tsx';
 import Home from './pages/home/home.tsx';
+import Qurban from './pages/qurban/qurban.tsx';
+import Aqiqa from './pages/aqiqa/aqiqa.tsx';
+import FeedLot from './pages/Feedlot/feedlot.tsx';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
@@ -14,8 +16,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/packages',
-        element: <Packages />,
+        path: '/qurban',
+        element: <Qurban />,
+      },
+      {
+        path: '/aqiqa',
+        element: <Aqiqa />,
+      },
+      {
+        path: '/feedlot',
+        element: <FeedLot />,
       },
     ],
   },
