@@ -6,6 +6,7 @@ import Aqiqa from './pages/aqiqa/aqiqa.tsx';
 import FeedLot from './pages/Feedlot/feedlot.tsx';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import SignIn from './pages/auth/signIn.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      // {
+      //   path: '/signIn',
+      //   element: <SignIn/>
+      // },
       {
         path: '/qurban',
         element: <Qurban />,
