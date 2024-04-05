@@ -6,10 +6,7 @@ import Aqiqa from './pages/aqiqa/aqiqa.tsx';
 import FeedLot from './pages/Feedlot/feedlot.tsx';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-<<<<<<< HEAD
 import Profile from './pages/profile/profile.tsx';
-=======
->>>>>>> 52866aeb6e9cee77796728b9719e8d911b5fe0cf
 // import SignIn from './pages/auth/signIn.tsx';
 const router = createBrowserRouter([
   {
