@@ -39,14 +39,14 @@ Verify your account
 <p className="text-xs text-[#000]">We will send you OTP via email</p>
 
 <div id="otp" className="flex flex-row justify-center text-center  mt-9">
-            <input className="rounded-l-[0.375rem] border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control" type="text" id="first"  /> 
-            <input className=" border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control " type="text" id="second"  /> 
-            <input className=" border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control " type="text" id="third"  /> 
+            <input className="font-bold text-2xl  rounded-l-[0.375rem] border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control  focus:ring-black focus-within:border-[#000] " type="text" id="first"  /> 
+            <input className="font-bold text-2xl border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control focus:ring-black focus-within:border-[#000]" type="text" id="second"  /> 
+            <input className="font-bold text-2xl border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control focus:ring-black focus-within:border-[#000]" type="text" id="third"  /> 
             
             <div className="rounded-full w-1 h-1 p-1 bg-[#09090B] justify-center text-center items-center m-6 "></div>
-            <input className=" border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control " type="text" id="fourth" />
-            <input className=" border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control " type="text" id="fifth"   /> 
-            <input className="rounded-r-[0.375rem] border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control " type="text" id="sixth"   />
+            <input className="font-bold text-2xl border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control focus:ring-black focus-within:border-[#000]" type="text" id="fourth" />
+            <input className="font-bold text-2xl border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control focus:ring-black focus-within:border-[#000]" type="text" id="fifth"   /> 
+            <input className="font-bold text-2xl rounded-r-[0.375rem] border-[#E4E4E7] h-[3.375rem] w-[3.125rem] text-center form-control focus:ring-black focus-within:border-[#000]" type="text" id="sixth"   />
             
                       </div>
 
