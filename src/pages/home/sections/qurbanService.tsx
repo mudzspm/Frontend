@@ -1,6 +1,6 @@
 const QurbanServiceBanner = () => {
   return (
-    <div className='relative text-center mt-[14.563rem]  bg-[#00ADB96B] xl:py-[7.15rem] lg:py-14 md:py-11 py-[2rem]'>
+    <div className='relative text-center bg-[#00ADB96B] xl:py-[7.15rem] lg:py-14 md:py-11 py-[2rem]'>
       <img
         src='aqiqah--.png'
         alt='Aqiqah'

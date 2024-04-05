@@ -11,6 +11,14 @@ const customSideBar: CustomFlowbiteTheme['sidebar'] = {
   },
 };
 
+const customDropdown: CustomFlowbiteTheme['dropdown'] = {
+  floating: {
+    item: {
+      base: 'hover:bg-transparent text-xl mb-5 px-3',
+    },
+  },
+};
+
 function NavigationBar() {
   const [show, setShow] = useState(false);
 
@@ -23,7 +31,7 @@ function NavigationBar() {
           show
             ? "before:opacity-25 before:content-[''] before:absolute before:bg-black before:w-full before:h-screen"
             : ''
-        } shadow-lg right-0 bg-white dark:bg-gray-900 fixed w-full z-20  start-0 border-b border-gray-200 dark:border-gray-600`}
+        } shadow-lg right-0 bg-white dark:bg-gray-900 sticky w-full z-20  start-0 border-b border-gray-200 dark:border-gray-600 top-0`}
       >
         <div className='bg-[#0F405A] p-[5px] text-white hidden lg:block'>
           <div className='max-w-[71.3rem] mx-auto flex text-base font-normal 2xl:justify-between md:justify-around'>
@@ -111,33 +119,38 @@ function NavigationBar() {
           >
             <div className='flex md:order-2'>
               <Navbar.Collapse>
-                <Navbar.Link
+                <Link
                   className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
-                  href='#'
-                  active
+                  to='/'
                 >
                   Home
-                </Navbar.Link>
+                </Link>
 
                 <Dropdown
+                  theme={customDropdown}
                   inline
                   label={<p className='text-xl font-normal'>Packages</p>}
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
                 >
-                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
-                    Qurban
-                  </Dropdown.Item>
-                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
-                    Aqiqah
-                  </Dropdown.Item>
+                  <Link to='/qurban'>
+                    <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
+                      Qurban
+                    </Dropdown.Item>
+                  </Link>
+                  <Link to='/aqiqa'>
+                    <Dropdown.Item className=' hover:bg-transparent hover:text-[#00ADB9] text-xl font-normal'>
+                      Aqiqah
+                    </Dropdown.Item>
+                  </Link>
                 </Dropdown>
-                <Navbar.Link
+                <Link
                   className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
-                  href='#'
+                  to='/feedlot'
                 >
                   FeedLot
-                </Navbar.Link>
+                </Link>
                 <Dropdown
+                  theme={customDropdown}
                   inline
                   label={<p className='text-xl font-normal'>Information</p>}
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
@@ -198,7 +211,7 @@ function NavigationBar() {
           <Sidebar.Items>
             <Sidebar.ItemGroup className='bg-transparent'>
               <Sidebar.Item href='#'>Home</Sidebar.Item>
-              <Sidebar.Collapse label='Packages'>
+              <Sidebar.Collapse className='text-xl' label='Packages'>
                 <Sidebar.Item href='#'>Qurban</Sidebar.Item>
                 <Sidebar.Item href='#'>Aqiqah</Sidebar.Item>
               </Sidebar.Collapse>
