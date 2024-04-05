@@ -1,9 +1,13 @@
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import Profile from './pages/profile/profile.tsx';
 import App from './App.tsx';
 import Packages from './pages/packages/packages.tsx';
 import Home from './pages/home/home.tsx';
+
 import './global.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -16,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/packages',
         element: <Packages />,
+      },
+      {
+        path: '/profile',
+        element: <Profile />,
       },
     ],
   },

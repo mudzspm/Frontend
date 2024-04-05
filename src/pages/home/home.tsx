@@ -2,7 +2,6 @@ import Hero from '@/pages/home/sections/hero';
 import PriceCard from './sections/priceCard';
 import Support from '@/pages/home/sections/support';
 import QurbanServiceBanner from '@/pages/home/sections/qurbanService';
-import Trust from '@/pages/home/sections/trust';
 import Services from '@/pages/home/sections/services';
 
 
