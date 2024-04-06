@@ -4,8 +4,10 @@ import Home from './pages/home/home.tsx';
 import Qurban from './pages/qurban/qurban.tsx';
 import Aqiqa from './pages/aqiqa/aqiqa.tsx';
 import FeedLot from './pages/Feedlot/feedlot.tsx';
+
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import Cart from './pages/cart/cart.tsx';
 // import SignIn from './pages/auth/signIn.tsx';
 const router = createBrowserRouter([
   {
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
         path: '/feedlot',
         element: <FeedLot />,
       },
+      // {
+      //   path: './cart',
+      //   element: <Cart />,
+      // },
     ],
   },
 ]);
