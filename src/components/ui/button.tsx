@@ -20,7 +20,8 @@ const buttonVariants = cva(
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
         login: 'text-sm text-[#FFFFFF] font-bold w-[360px] ',
-        register: 'text-sm text-[#FFFFFF] font-bold w-[100%] '
+        register: 'text-sm text-[#FFFFFF] font-bold w-[100%] ',
+        progress: 'text-sm text-[#FFFFFF] font-semibold w-[367px]',
       },
       size: {
         default: 'px-8 py-3.5',
