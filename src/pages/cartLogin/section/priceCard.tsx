@@ -58,9 +58,9 @@ const PriceCard = () => {
 "
 />
 
-<div className="max-w-[68px] basis-1/4 h-16">
+<div className="max-w-[68px] basis-1/4 h-15">
 
-<img src="brand.png" alt="Qurban" className="max-w-full"/>
+<img src="qurban--.svg" alt="Qurban" className="max-w-full"/>
 </div>
 
 <div className="flex flex-col basis-1/2 gap-1 ">
@@ -112,9 +112,9 @@ Kandang Pak Samad
 "
 />
 
-<div className="max-w-[68px] basis-1/4 h-16">
+<div className="max-w-[68px] basis-1/4 h-15">
 
-<img src="brand.png" alt="Qurban" className="max-w-full"/>
+<img src="qurban--.svg" alt="Qurban" className="max-w-full"/>
 </div>
 
 <div className="flex flex-col basis-1/2 gap-1 ">
@@ -180,9 +180,9 @@ Kandang Pak Samad
 "
 />
 
-<div className="max-w-[68px] basis-1/4 h-16">
+<div className="max-w-[68px] basis-1/4 h-15">
 
-<img src="brand.png" alt="Qurban" className="max-w-full"/>
+<img src="qurban--.svg" alt="Qurban" className="max-w-full"/>
 </div>
 
 <div className="flex flex-col basis-1/2 gap-1 ">
