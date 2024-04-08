@@ -8,7 +8,7 @@
 import Contactus from "./pages/contactUs/contactUs";
 
 // import Cart from "./pages/cart/cart";
-import CartLogin from "./pages/cartLogin/cartLogin";
+// import CartLogin from "./pages/cartLogin/cartLogin";
 
 // import SignIn from './pages/auth/signIn';
 
@@ -23,8 +23,8 @@ function App() {
 {/* <OTP /> */}
       {/* <Register/> */}
       {/* <Cart /> */}
-      <CartLogin />
-{/* <Contactus /> */}
+      {/* <CartLogin /> */}
+<Contactus />
 
     </>
   );
