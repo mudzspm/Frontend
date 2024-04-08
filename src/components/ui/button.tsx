@@ -22,6 +22,7 @@ const buttonVariants = cva(
         login: 'text-sm text-[#FFFFFF] font-bold w-[360px] ',
         register: 'text-sm text-[#FFFFFF] font-bold w-[100%] ',
         progress: 'text-sm text-[#FFFFFF] font-semibold w-[367px]',
+        message: 'bg-[#09B1CB] text-[#FFFFFF] text-sm'
       },
       size: {
         default: 'px-8 py-3.5',
@@ -30,6 +31,7 @@ const buttonVariants = cva(
         xl:'py-2.5 px-6 rounded-[6px]',
         xxl: 'py-2.5 px-6 rounded-[6px]',
         icon: 'h-10 w-10',
+        md: 'rounded-[4px] w-[150px] h-[44px]'
       },
     },
     defaultVariants: {

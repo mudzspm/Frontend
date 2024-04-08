@@ -5,8 +5,10 @@
 // import OTP from './pages/auth/OTP';
 // import Register from './pages/auth/register';
 
+import Contactus from "./pages/contactUs/contactUs";
+
 // import Cart from "./pages/cart/cart";
-import CartLogin from "./pages/cartLogin/cartLogin";
+// import CartLogin from "./pages/cartLogin/cartLogin";
 
 // import SignIn from './pages/auth/signIn';
 
@@ -21,7 +23,9 @@ function App() {
 {/* <OTP /> */}
       {/* <Register/> */}
       {/* <Cart /> */}
-      <CartLogin />
+      {/* <CartLogin /> */}
+<Contactus />
+
     </>
   );
 }
