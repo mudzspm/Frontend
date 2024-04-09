@@ -109,32 +109,32 @@ Latest Posts
 <div className="mt-[1.625rem]">
   
 
-<div className="flex justify-start items-center mb-[0.625rem] text-base">
+<div className="flex justify-start items-center gap-4 mb-[0.625rem] text-base">
   <img src="cal1.svg" alt="List" className="mb-[0.625rem] mt-[0.625rem]"/>
   <p className="mb-[0.625rem] mt-[0.625rem]">
   Welcome to Flatsome
   </p>
 </div>
-<div className="flex justify-start items-center border-t border-[#ECECEC]  text-base">
+<div className="flex justify-start items-center border-t gap-4 border-[#ECECEC]  text-base">
   <img src="cal2.svg" alt="List" className="mb-[0.625rem] mt-[0.625rem]"/>
   <p className="mb-[0.625rem] mt-[0.625rem]">
   Just another post with
 A Gallery
   </p>
 </div>
-<div className="flex justify-start items-center border-t border-[#ECECEC]  text-base">
+<div className="flex justify-start items-center border-t gap-4 border-[#ECECEC]  text-base">
   <img src="cal3.svg" alt="List" className="mb-[0.625rem] mt-[0.625rem]"/>
   <p className="mb-[0.625rem] mt-[0.625rem]">
   A Simple Blog Post
   </p>
 </div>
-<div className="flex justify-start items-center border-t border-[#ECECEC]  text-base">
+<div className="flex justify-start items-center border-t gap-4 border-[#ECECEC]  text-base">
   <img src="cal3.svg" alt="List" className="mb-[0.625rem] mt-[0.625rem]"/>
   <p className="mb-[0.625rem] mt-[0.625rem]">
   A Video Blog Post
   </p>
 </div>
-<div className="flex justify-start items-center border-t border-[#ECECEC] mb-[0.625rem]  text-base">
+<div className="flex justify-start items-center border-t gap-4 border-[#ECECEC] mb-[0.625rem]  text-base">
   <img src="cal4.svg" alt="List" className="mt-[0.625rem]"/>
   <p className="mt-[0.625rem]">
   Just a cool blog post
