@@ -24,7 +24,11 @@ const Support = () => {
   return (
     <>
       <section>
-        <div className='relative bg-gradient-to-r from-[#084059ED] via-[#084059ED] to-[#53AFBEED]'>
+      {/* bg-gradient-to-r from-[#084059ED] via-[#084059ED] to-[#53AFBEED] */}
+        <div
+        style={{backgroundImage:
+          'linear-gradient(270deg, rgba(83, 175, 190, 0.93) 0%, rgba(8, 64, 89, 0.93) 100%)',}}
+        className='relative '>
           <img
             src='feedLot.png'
             alt='Aqiqah'
@@ -47,11 +51,11 @@ const Support = () => {
               </p>
             </div>
             <div className=' ml-auto mt-[6.5rem]'>
-              <div className=' flex justify-end gap-[1.125rem]'>
+              <div className=' flex justify-end  gap-[1.125rem]'>
                 <p className='text-[#FFFFFF]'>Find out more</p>
                 <img src='FindArrow.svg' alt='Arrow' className='mr-[1rem]' />
               </div>
-              <div className=' flex justify-end gap-[1.125rem] '>
+              <div className=' flex justify-end gap-[1.125rem] mt-[3.125rem]'>
                 {imagesAnimals.map(({ src }) => (
                   <SupportCard image={src} />
                 ))}

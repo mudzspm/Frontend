@@ -62,6 +62,9 @@ function NavigationBar() {
                 <a href='#' className='inline-block'>
                   <img src='yt.svg' alt='facebook' />
                 </a>
+                <a href='#' className='inline-block'>
+                  <img src='insta.svg' alt='facebook' />
+                </a>
               </div>
             </div>
           </div>
@@ -125,12 +128,12 @@ function NavigationBar() {
                 >
                   Home
                 </Link>
-
+<div >
                 <Dropdown
                   theme={customDropdown}
                   inline
-                  label={<p className='text-xl font-normal'>Packages</p>}
-                  className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
+                  label={<p className='text-xl font-normal '>Packages</p>}
+                  className='rounded-none rounded-b-lg border-none px-4 py-2 mt-4 bg-[#f7f7f7]'
                 >
                   <Link to='/qurban'>
                     <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
@@ -143,17 +146,21 @@ function NavigationBar() {
                     </Dropdown.Item>
                   </Link>
                 </Dropdown>
+
+</div>
+
                 <Link
                   className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
                   to='/feedlot'
                 >
                   FeedLot
                 </Link>
+                <div> 
                 <Dropdown
                   theme={customDropdown}
                   inline
                   label={<p className='text-xl font-normal'>Information</p>}
-                  className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
+                  className='rounded-none rounded-b-lg border-none px-4 py-2 mt-4 bg-[#f7f7f7]'
                 >
                   <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
                     About Us
@@ -168,6 +175,7 @@ function NavigationBar() {
                     Contact Us
                   </Dropdown.Item>
                 </Dropdown>
+                </div>
               </Navbar.Collapse>
               <Navbar.Toggle />
             </div>
