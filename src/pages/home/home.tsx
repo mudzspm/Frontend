@@ -5,6 +5,7 @@ import QurbanServiceBanner from '@/pages/home/sections/qurbanService';
 import Services from '@/pages/home/sections/services';
 import Timer from './sections/timer';
 import UserJourney from '@/components/UserJourney';
+import Trust from './sections/trust';
 
 const Home = () => {
   return (
