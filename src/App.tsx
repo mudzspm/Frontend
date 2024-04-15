@@ -7,7 +7,7 @@
 
 import AboutUs from "./pages/aboutUs/aboutUs";
 
-// import Contactus from "./pages/contactUs/contactUs";
+import Contactus from "./pages/contactUs/contactUs";
 
 // import Cart from "./pages/cart/cart";
 // import CartLogin from "./pages/cartLogin/cartLogin";
@@ -26,9 +26,9 @@ function App() {
       {/* <Register/> */}
       {/* <Cart /> */}
       {/* <CartLogin /> */}
-{/* <Contactus /> */}
+<Contactus />
 
-<AboutUs />
+{/* <AboutUs /> */}
     </>
   );
 }

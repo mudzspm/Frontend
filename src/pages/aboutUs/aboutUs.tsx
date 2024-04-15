@@ -110,7 +110,7 @@ Latest Posts
   
 
 <div className="flex justify-start items-center gap-4 mb-[0.625rem] text-base">
-  <img src="cal1.svg" alt="List" className="mb-[0.625rem] mt-[0.625rem]"/>
+  <img src="cal1.svg" alt="List" className=" mt-[0.625rem]"/>
   <p className="mb-[0.625rem] mt-[0.625rem]">
   Welcome to Flatsome
   </p>
