@@ -1,7 +1,7 @@
 function SearchForm() {
   return (
     <div className='border-b-[1px] pb-6'>
-      <form className='max-w-[55rem] mx-auto border-[3px] rounded-2xl flex'>
+      <form className='max-w-[55rem] mx-auto border-[3px] rounded-2xl flex border-[#E3E1E1]'>
         <div className='flex flex-col gap-1 w-full py-[15px] pl-5 pr-1 border-r-[1px]'>
           <label
             className='text-[#C5C0C0] text-xs font-semibold'

@@ -14,7 +14,7 @@ style={{
 }}
 >
 <img src="qurban--.png" alt="Qurban" 
-className='mix-blend-overlay max-w-full'
+className='mix-blend-overlay w-full'
 />
 <div className="absolute top-[40%] left-[30%] ">
 <h3 className="font-bold text-5xl text-[#FFFFFF] leading-[3.6rem]">
@@ -40,7 +40,8 @@ Create Account
     </p>
     <div className="relative mt-2">
     <input type="text" 
-    className=" text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
+    className=" focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+     text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
     placeholder="Katijah Binti Mohd Amin" value=""/>
     <button type="button" data-hs-toggle-password='{
@@ -57,8 +58,9 @@ Create Account
 <label className="block text-xs font-normal mt-6" >Email</label>
 <div className="relative mt-2">
     <input type="email" 
-    className=" text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
-    placeholder="Katijah Binti Mohd Amin" value=""/>
+    className="focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+     text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
+    placeholder="Katijahamin@gmail.com" value=""/>
     <button type="button" data-hs-toggle-password='{
         "target": "#hs-toggle-password"
       }' className="absolute top-0 end-0 p-3.5 rounded-e-md">
@@ -74,7 +76,9 @@ Create Account
 <label className="block text-xs font-normal mt-6" >IC Number</label>
 <div className="mt-2">
     <input type="number" 
-    className=" text-sm  bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
+    className=" 
+    focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+    text-sm  bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
     placeholder="12345678901" value=""/>
   </div>
 </div>
@@ -85,7 +89,9 @@ Create Account
 <label className="block text-xs font-normal mt-6" >Phone Number</label>
 <div className="relative mt-2">
     <input type="text" 
-    className=" text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
+    className=" 
+    focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+    text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
     placeholder="0193456789" value=""/>
     <button type="button" data-hs-toggle-password='{
         "target": "#hs-toggle-password"
@@ -102,7 +108,9 @@ Create Account
 <label className="block text-xs font-normal mt-6" >Password</label>
 <div className="relative mt-2">
     <input id="hs-toggle-password" type="password" 
-    className=" text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
+    className=" 
+    focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+    text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none"
     placeholder="Enter password" value=""/>
     <button type="button" data-hs-toggle-password='{

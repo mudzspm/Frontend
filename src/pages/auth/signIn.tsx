@@ -42,14 +42,18 @@ Nice to see you again!
     <p className="mt-[1.938rem] text-xs font-normal">
         Login
     </p>
-<input name="email" placeholder="Email" type="text"  className="mt-2 bg-[#F2F2F2] 
+<input name="email" placeholder="Email" type="text"  className="
+focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+mt-2 bg-[#F2F2F2] 
 py-2.5 pr-2 pl-2.5 w-[22.625rem] h-[2.932rem] rounded-[0.438rem] border-none text-sm" />
 <p className="mt-4 text-xs text-[#000]">
         Password
     </p>
     <div className="relative mt-2">
     <input id="hs-toggle-password" type="password" 
-    className=" text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
+    className=" 
+    focus:outline-none focus:border-[#00ADB9] focus:ring-1 focus:ring-[#00ADB9]
+    text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-[22.625rem] h-[2.932rem] rounded-[0.438rem] border-none"
     placeholder="Enter password" value=""/>
     <button type="button" data-hs-toggle-password='{
