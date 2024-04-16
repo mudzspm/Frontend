@@ -1,45 +1,14 @@
-interface TimelineItemProps {
-  title: string;
-  timestamp: string;
-  isFirst: boolean;
-  isLast: boolean;
-}
-
-const TimelineItem = ({
-  title,
-  timestamp,
-  isFirst,
-  isLast,
-}: TimelineItemProps) => (
+const TimelineItem = ({ title, timestamp, isFirst, isLast }) => (
   <div className='relative pb-8'>
     {!isLast && (
       <span
-        className='absolute top-4 left-4 -ml-px h-full w-0.5 bg-blue-600'
+        className='absolute top-4 left-4 -ml-px h-full w-0.5 bg-[#00ADB9]'
         aria-hidden='true'
       ></span>
     )}
     <div className='relative flex space-x-3'>
       <div>
-        <span
-          className={`${
-            isFirst ? 'bg-green-500' : 'bg-blue-500'
-          } h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white`}
-        >
-          {/* Icon placeholder: insert actual SVG or element here */}
-          <svg
-            className='h-5 w-5 text-white'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke='currentColor'
-            strokeWidth='2'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              d='M5 13l4 4L19 7'
-            />
-          </svg>
-        </span>
+        <div className='bg-[#00ADB9] rounded-[14px] w-10 h-10'></div>
       </div>
       <div className='min-w-0 flex-1 pt-1.5 flex flex-col space-x-4'>
         <div>

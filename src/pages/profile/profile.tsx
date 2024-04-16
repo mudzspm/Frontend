@@ -5,9 +5,16 @@ import trackingIcon from './icons/tracking.svg';
 import selectedTrackingIcon from './icons/selectedTracking.svg';
 import transactionIcon from './icons/transaction.svg';
 import selectedTransactionIcon from './icons/transactionSelected.svg';
+import helpLine from './icons/helpLine.svg';
+import selectedHelpLine from './icons/selectedHelpLine.svg'
+import policy from './icons/policy.svg';
+import selectedPolicy from './icons/selectedPolicy.svg';
 import ProfileForm from './components/ProfileForm';
 import { userProfile } from './types';
 import Tracking from './components/Tracking';
+import Transaction from './components/Transaction';
+import Policy from './components/Policy';
+import HelpLine from './components/HelpLine';
 
 const exampleUser: userProfile = {
     userData: {
@@ -63,17 +70,20 @@ const Profile = () => {
                     <p className='font-medium'>More</p>
                 </div>
                 <div className={`${tabClassName(3)} mt-2`} onClick={() => setSelected(3)}>
-                    <img src={profileIcon} />
+                    <img src={selected == 3 ? selectedPolicy : policy} />
                     <p>Policy</p>
                 </div>
                 <div className={tabClassName(4)} onClick={() => setSelected(4)}>
-                    <img src={profileIcon} />
+                    <img src={selected == 4 ? selectedHelpLine : helpLine} />
                     <p>Help Line</p>
                 </div>
             </div>
-            <div className='mt-[10rem]'>
+            <div className='mt-[6rem] mb-[10rem]'>
                 {selected == 0 && <ProfileForm profileData={user} setProfile={setUser} />}
                 {selected == 1 && <Tracking />}
+                {selected == 2 && <Transaction />}
+                {selected == 3 && <Policy />}
+                {selected == 4 && <HelpLine />}
             </div>
         </section>
     );
