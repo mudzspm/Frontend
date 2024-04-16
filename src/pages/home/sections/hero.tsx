@@ -9,7 +9,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    // autoplay: true,
+    autoplay: true,
     appendDots: (dots: any) => (
       <div>
         <ul style={{ margin: '-20px' }}> {dots} </ul>

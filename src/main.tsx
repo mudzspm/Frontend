@@ -9,6 +9,10 @@ import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import Cart from './pages/cart/cart.tsx';
 // import SignIn from './pages/auth/signIn.tsx';
+import Profile from './pages/profile/profile.tsx';
+import SignIn from './pages/auth/signIn.tsx';
+import SignUp from './pages/auth/register.tsx';
+import OTP from './pages/auth/OTP.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -18,10 +22,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      // {
-      //   path: '/signIn',
-      //   element: <SignIn/>
-      // },
+
       {
         path: '/qurban',
         element: <Qurban />,
@@ -38,7 +39,24 @@ const router = createBrowserRouter([
       //   path: './cart',
       //   element: <Cart />,
       // },
+      {
+        path: '/profile',
+        element: <Profile />,
+      },
     ],
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
+  },
+  {
+    path: '/signin',
+    element: <SignIn />,
+  },
+
+  {
+    path: '/otp',
+    element: <OTP />,
   },
 ]);
 

@@ -2,10 +2,10 @@ import Hero from '@/pages/home/sections/hero';
 import PriceCard from './sections/priceCard';
 import Support from '@/pages/home/sections/support';
 import QurbanServiceBanner from '@/pages/home/sections/qurbanService';
-import Trust from '@/pages/home/sections/trust';
 import Services from '@/pages/home/sections/services';
 import Timer from './sections/timer';
 import UserJourney from '@/components/UserJourney';
+import Trust from './sections/trust';
 
 const Home = () => {
   return (
@@ -38,7 +38,7 @@ const Home = () => {
 
       <Support />
 
-      <section className='max-w-[75.5rem] mx-auto'>
+      <section className='max-w-[75.5rem] mx-auto my-[7.8rem] flex flex-col gap-[180px]'>
         <Timer countDownDays={4} />
         <UserJourney />
       </section>
