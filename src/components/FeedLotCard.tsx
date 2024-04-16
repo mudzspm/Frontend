@@ -64,7 +64,7 @@ function FeedLotCard() {
               alt=''
             />
             <div className='flex flex-col'>
-              <p className='text-xl font-medium'>Cattle</p>
+              <p className='text-xl font-medium'>Buffalo</p>
               <p className='text-[10px] text-[#969696] leading-normal'>
                 Average weight 100 KG
               </p>
@@ -81,7 +81,7 @@ function FeedLotCard() {
               alt=''
             />
             <div className='flex flex-col'>
-              <p className='text-xl font-medium'>Cattle</p>
+              <p className='text-xl font-medium'>Goat</p>
               <p className='text-[10px] text-[#969696] leading-normal'>
                 Average weight 100 KG
               </p>

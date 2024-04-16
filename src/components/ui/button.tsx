@@ -14,21 +14,24 @@ const buttonVariants = cva(
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
-          'border-2 border-[#C1272D] text-[#C1272D] hover:bg-[#C1272D] hover:text-white',
+          'border-[1px] border-[#C1272D] text-[#C1272D] hover:bg-[#C1272D] hover:text-white',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          'bg-[#01ACBC] text-[#FFFFFF] ',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
         login: 'text-sm text-[#FFFFFF] font-bold w-[360px] ',
-        register: 'text-sm text-[#FFFFFF] font-bold w-[100%] '
+        register: 'text-sm text-[#FFFFFF] font-bold w-[100%] ',
+        progress: 'text-sm text-[#FFFFFF] font-semibold w-[367px]',
+        message: 'bg-[#09B1CB] text-[#FFFFFF] text-sm'
       },
       size: {
         default: 'px-8 py-3.5',
         sm: 'px-5 py-2.5 rounded-[7px]',
-        lg: 'h-11 rounded-md px-8',
-        xl:'py-2.5 px-6 rounded-[6px]',
-        xxl: 'py-2.5 px-6 rounded-[6px]',
+        lg: 'h-11 rounded-[7px] py-4 w-[16.313rem] px-8',
+        xl:'py-2.5 px-6 rounded-md',
+        xxl: 'py-2.5 px-6 rounded-md',
         icon: 'h-10 w-10',
+        md: 'rounded-[4px] w-[150px] h-[44px]'
       },
     },
     defaultVariants: {

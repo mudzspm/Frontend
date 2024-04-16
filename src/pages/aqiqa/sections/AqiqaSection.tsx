@@ -1,5 +1,7 @@
 import PortionCard from '@/components/PortionCard';
 import SearchForm from '@/components/SearchForm';
+import { Button } from '@/components/ui/button';
+
 
 function AqiqaSection() {
   return (
@@ -8,13 +10,22 @@ function AqiqaSection() {
 
       <div className='mt-[60px]'>
         <div className='flex flex-col gap-7 px-20'>
-          <h2 className='text-2xl font-normal'>Aqiqah Goat</h2>
+          <h2 className='text-[1.625rem] font-normal text-[#000]'>Qurban - Cattle</h2>
           <div className='flex gap-8'>
             <PortionCard />
             <PortionCard />
           </div>
         </div>
       </div>
+    <div className='flex justify-end items-center font-Montserrat text-[1.75rem] '>
+      <Button size='lg' variant='message' >
+      View Cart <span className='ml-2 mt-[2px]'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16" fill="none">
+<path d="M20.3048 8.70711C20.6953 8.31658 20.6953 7.68342 20.3048 7.29289L13.9408 0.928932C13.5503 0.538408 12.9171 0.538408 12.5266 0.928932C12.1361 1.31946 12.1361 1.95262 12.5266 2.34315L18.1834 8L12.5266 13.6569C12.1361 14.0474 12.1361 14.6805 12.5266 15.0711C12.9171 15.4616 13.5503 15.4616 13.9408 15.0711L20.3048 8.70711ZM0.597656 9H19.5977V7H0.597656V9Z" fill="white"/>
+</svg>
+      </span>
+      </Button>
+    </div>
     </section>
   );
 }
