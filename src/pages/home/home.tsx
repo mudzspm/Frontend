@@ -28,7 +28,7 @@ const Home = () => {
         <PriceCard />
       </div>
 
-      <div className='relative mt-[13.375rem] h-[18.125rem] bg-[#00ADB96B] py-[2rem]'>
+      <div className='relative mt-[13.375rem] h-[18.125rem] bg-[#00ADB9] py-[2rem]'>
         <img
           src='qurban-.png'
           alt='Aqiqah'

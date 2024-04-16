@@ -72,5 +72,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* font-family: "Montserrat"; */
+    /* font-family: "Nourd-Bold"; */
+    /* font-family: "Glacial Indifference"; */
   }
 }

@@ -85,6 +85,77 @@ function Footer() {
         </ul>
       </div>
     </footer>
+
+// pt-52 pb-32
+//     <div className='bg-[#0F405A]'>
+//       <div className='grid grid-cols-3 items-center border-b-[1px] mb-4 w-full'>
+// <div>
+//   <img src='logo.png' alt="Logo" />
+// </div>
+// <div>
+//  <p className='text-center text-[#A3A3A3] font-normal'>
+//  © All right reserved 2024 DigiQurban
+//  </p>
+// </div>
+
+// <div>
+// <ul className='flex justify-end'>
+//           <li>
+//             <a href='#'>
+//               <img src='fb.svg' alt='facebook' />
+//             </a>
+//           </li>
+//           <li>
+//             <a href='#'>
+//               <img src='instagram.svg' alt='instagram' />
+//             </a>
+//           </li>
+//           <li>
+//             <a href='#'>
+//               <img src='twitter.svg' alt='twitter' />
+//             </a>
+//           </li>
+//         </ul>
+// </div>
+//       </div>
+
+//       <div className='flex'>
+//             <div className='flex flex-col p-4 gap-5 w-full'>
+//               <h2 className='text-xl text-white font-bold'>Quick links</h2>
+//               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+//                 <li>About us</li>
+//                 <li>Portfolio</li>
+//                 <li>Blog</li>
+//               </ul>
+//             </div>
+//             <div className='flex flex-col p-4 gap-5 w-full'>
+//               <h2 className='text-xl text-white font-bold'>Explore</h2>
+//               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+//                 <li>Pages</li>
+//                 <li>Events</li>
+//                 <li>Shop</li>
+//               </ul>
+//             </div>
+//             <div className='flex flex-col p-4 gap-5 w-full'>
+//               <h2 className='text-xl text-white font-bold'>Get in touch</h2>
+//               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+//                 <li>Locations</li>
+//                 <li>Media</li>
+//                 <li>Contact us</li>
+//               </ul>
+//             </div>
+            
+//             <div className='flex flex-col p-4 gap-5 w-full justify-end text-end'>
+//               <h2 className='text-xl text-white font-bold'>Get in touch</h2>
+//               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal'>
+//                 <li>Locations</li>
+//                 <li>Media</li>
+//                 <li>Contact us</li>
+//               </ul>
+//             </div>
+//           </div>
+
+//     </div>
   );
 }
 
