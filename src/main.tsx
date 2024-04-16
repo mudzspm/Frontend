@@ -7,7 +7,9 @@ import FeedLot from './pages/Feedlot/feedlot.tsx';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Profile from './pages/profile/profile.tsx';
-// import SignIn from './pages/auth/signIn.tsx';
+import SignIn from './pages/auth/signIn.tsx';
+import SignUp from './pages/auth/register.tsx';
+import OTP from './pages/auth/OTP.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -17,10 +19,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      // {
-      //   path: '/signIn',
-      //   element: <SignIn/>
-      // },
+
       {
         path: '/qurban',
         element: <Qurban />,
@@ -35,9 +34,22 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <Profile />
-      }
+        element: <Profile />,
+      },
     ],
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
+  },
+  {
+    path: '/signin',
+    element: <SignIn />,
+  },
+
+  {
+    path: '/otp',
+    element: <OTP />,
   },
 ]);
 
