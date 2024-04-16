@@ -59,7 +59,7 @@ const Timer = ({ countDownDays }: TimerProps) => {
   }, []);
 
   return (
-    <div className='bg-[#00ADB9] text-center  rounded-[15px] pb-8 px-8 flex justify-center gap-14 mt-[7.8rem] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.3)]'>
+    <div className='bg-[#00ADB9] text-center  rounded-[15px] pb-8 px-8 flex justify-center gap-14  shadow-[0px_4px_16px_0px_rgba(0,0,0,0.3)]'>
       <div className='flex justify-center items-center gap-6'>
         <h2 className='text-[#FFFFFF] text-[5.25rem] flex flex-col justify-center'>
           <p>{timeLeft.days}</p>

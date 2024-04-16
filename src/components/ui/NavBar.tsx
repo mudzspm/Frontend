@@ -1,20 +1,19 @@
 import { Link } from 'react-router-dom';
 import { Dropdown, Navbar, Sidebar, CustomFlowbiteTheme } from 'flowbite-react';
 import { useState } from 'react';
+import { Button } from './button';
 
 const customSideBar: CustomFlowbiteTheme['sidebar'] = {
   root: {
     inner: 'bg-transparent',
   },
-  item: {
-    base: 'text-xl',
-  },
 };
 
 const customDropdown: CustomFlowbiteTheme['dropdown'] = {
   floating: {
+    base: 'flex',
     item: {
-      base: 'hover:bg-transparent text-xl mb-5 px-3',
+      base: 'hover:bg-transparent text-xl mb-5 px-3 inline-block',
     },
   },
 };
@@ -73,19 +72,41 @@ function NavigationBar() {
           >
             <img src='digi-qurban.svg' alt='digi-qurban.svg' />
           </Link>
-          <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
+          <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-4'>
             <Link
               to='#'
               className='flex items-center space-x-3 rtl:space-x-reverse mr-5'
             >
               <img src='cart.svg' className='h-6 w-6' alt='digi cart' />
             </Link>
-            <Link
-              to='#'
-              className='flex items-center space-x-3 rtl:space-x-reverse'
+
+            <Dropdown
+              theme={customDropdown}
+              inline
+              label={
+                <img
+                  src='user-detail.svg'
+                  className='h-8 w-8'
+                  alt='digi user'
+                />
+              }
+              className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
             >
-              <img src='user-detail.svg' className='h-8 w-8' alt='digi user' />
-            </Link>
+              <Link to='/signup'>
+                <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
+                  <Button className='bg-[#084059] hover:bg-[#084059]'>
+                    Sign Up
+                  </Button>
+                </Dropdown.Item>
+              </Link>
+              <Link to='/signin'>
+                <Dropdown.Item className=' hover:bg-transparent hover:text-[#00ADB9] text-xl font-normal w-full'>
+                  <Button className='bg-[#A7E0EA] hover:bg-[#A7E0EA]'>
+                    Sign In
+                  </Button>
+                </Dropdown.Item>
+              </Link>
+            </Dropdown>
 
             <button
               onClick={handleSideBar}
@@ -125,7 +146,12 @@ function NavigationBar() {
                 >
                   Home
                 </Link>
-
+                <Link
+                  className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
+                  to='/profile'
+                >
+                  Profile
+                </Link>
                 <Dropdown
                   theme={customDropdown}
                   inline

@@ -38,7 +38,7 @@ const Home = () => {
 
       <Support />
 
-      <section className='max-w-[75.5rem] mx-auto'>
+      <section className='max-w-[75.5rem] mx-auto my-[7.8rem] flex flex-col gap-[180px]'>
         <Timer countDownDays={4} />
         <UserJourney />
       </section>
