@@ -1,11 +1,7 @@
 import { useState } from 'react'
 import { TransactionHistory } from './TransactionHistory'
 import TransactionDetailsView from './TransactionDetailsView'
-
-// type TrackingProps = {
-//     profileData: userProfile,
-//     setProfile: React.Dispatch<React.SetStateAction<userProfile>>
-// }
+import { Installments } from './Installments'
 
 const Transaction = () => {
     const [transactionDetailsView, setTransactionDetailsView] = useState(false)
@@ -28,6 +24,7 @@ const Transaction = () => {
                     </div>
                     <div>
                         {selectedTrackingType == 0 && <TransactionHistory setTransactionDetailsView={setTransactionDetailsView} />}
+                        {selectedTrackingType == 1 && <Installments />}
                     </div>
                 </div> :
                     <TransactionDetailsView setTransactionDetailsView={setTransactionDetailsView} />
