@@ -29,7 +29,7 @@ const TransactionDetailsView = ({ setTransactionDetailsView }: TransactionDetail
         return invoiceData.orderDetails.reduce((total, item) => total + item.netPrice * item.qty, 0);
     };
     return (
-        <div className='bg-white w-[850px] p-10 shadow-xl border border-solid rounded-sm  mb-2'>
+        <div className='bg-white w-[850px] p-10 shadow-xl border border-solid rounded-[0.813rem]  mb-2'>
 
             <div className="flex justify-between items-center mb-4">
                 <div className="flex gap-2 items-center cursor-pointer" onClick={() => setTransactionDetailsView(false)}>

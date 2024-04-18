@@ -6,7 +6,7 @@ export const Installments = () => {
 
             <p className="font-medium text-[20px]">Ongoing</p>
 
-            <div className="mt-8">
+            <div className="">
                 <Installment complete={false} />
                 <Installment complete={false} />
             </div>

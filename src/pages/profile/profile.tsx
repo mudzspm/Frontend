@@ -15,6 +15,7 @@ import Tracking from './components/Tracking';
 import Transaction from './components/Transaction';
 import Policy from './components/Policy';
 import HelpLine from './components/HelpLine';
+import PolicyDetail from './components/policyDetail';
 
 const exampleUser: userProfile = {
     userData: {
@@ -75,13 +76,14 @@ const Profile = () => {
                 </div>
                 <div className={tabClassName(4)} onClick={() => setSelected(4)}>
                     <img src={selected == 4 ? selectedHelpLine : helpLine} />
-                    <p>Help Line</p>
+                    <p>Help Center</p>
                 </div>
             </div>
             <div className='mt-[6rem] mb-[10rem]'>
                 {selected == 0 && <ProfileForm profileData={user} setProfile={setUser} />}
                 {selected == 1 && <Tracking />}
                 {selected == 2 && <Transaction />}
+                {selected ==3 && <PolicyDetail />}
                 {selected == 3 && <Policy />}
                 {selected == 4 && <HelpLine />}
             </div>

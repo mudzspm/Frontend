@@ -1,6 +1,14 @@
 const Policy = () => {
     return (
         <div className='bg-white w-[850px] p-10 shadow-xl border border-solid rounded-sm  mb-2'>
+            <div className="flex justify-start items-center gap-[15px] mb-5">
+              
+                    <img src="back-.svg" alt="Back" />
+                    <p className="text-[#00ADB9] text-sm">
+                    Return
+                    </p>
+               
+            </div>
             <div className="bg-gradient-to-r from-[#00ADB9] to-[#5ed1da] h-[190px] flex justify-center flex-col gap-2 rounded-[12px] pl-4">
                 <p className='text-[#fff] font-bold text-[36px]'>Privacy Policy</p>
                 <p className='text-[#fff] text-[14px]'>Here are some of the frequently asked questions or send us a message.</p>
