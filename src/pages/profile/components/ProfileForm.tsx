@@ -34,6 +34,7 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                 <div className='mb-4'>
                     <label className='text-[12px] font-semibold'>Name</label>
                     <TextInput
+                    className='text-[#C0C0C0]'
                         value={profileData.userData?.name}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                             setProfile({ userData: { ...profileData.userData, name: e.target.value }, favoriteParticipants: profileData.favoriteParticipants })
@@ -67,7 +68,7 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                     </div>
                 </div>
                 <div className='mb-4'>
-                    <label className='font-semibold text-[12px]'>Address</label>
+                    <label className='font-semibold text-[12px]'>Billing Address</label>
                     <div className='mb-2'>
                         <TextInput
                             aria-label='line 1'
@@ -128,10 +129,16 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                     <hr className='mt-2' />
                 </div>
                 <div className='mt-4'>
+                    <p className='mb-2.5 text-base'>
+                    Participant 1
+                    </p>
                     {profileData?.favoriteParticipants.map((participant, index) => {
                         return (
                             <div className='flex mb-4' key={index}>
                                 <div className='w-[60%] mr-[3%]'>
+                                <p className='mb-2.5 text-base'>
+                    Participant 1
+                    </p>
                                     <label className='text-[12px] font-semibold'>Name</label>
                                     <TextInput
                                         value={participant?.name}
@@ -145,6 +152,7 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                                     />
                                 </div>
                                 <div className='w-[37%]'>
+                                    
                                     <label className='text-[12px] font-semibold'>IC Number</label>
                                     <TextInput
                                         value={participant.icNumber}

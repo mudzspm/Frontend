@@ -51,7 +51,10 @@ const Profile = () => {
 
     const tabClassName = (index: number) => `flex gap-2 p-3 cursor-pointer text-[14px] min-w-250px ${selected == index ? 'bg-[#00ADB9] text-[#fff] rounded-[6px]' : 'bg-#fff text-[#525252BF]'}`
 
-    return (
+    return (<>
+    <div className='bg-[#E3F4F6] h-[50px] w-full'>
+
+    </div>
         <section className="justify-center gap-[40px] relative 2xl:px-52 xl:px-32 lg:px-24 md:px-12 px-6 flex min-h-[100dvh]">
             <div className='mt-[12rem]'>
                 <p className='text-[#525252] text-[14px] mb-4'>General</p>
@@ -88,6 +91,7 @@ const Profile = () => {
                 {selected == 4 && <HelpLine />}
             </div>
         </section>
+    </>
     );
 };
 

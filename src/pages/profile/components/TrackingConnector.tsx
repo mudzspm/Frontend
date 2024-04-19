@@ -1,4 +1,5 @@
 import orderReceivedIcon from '../icons/completedOrder.svg';
+
 import orderIcon from '../icons/completedOrder.svg';
 
 type connectorProps = {

@@ -8,7 +8,9 @@ const TimelineItem = ({ title, timestamp, isFirst, isLast }) => (
     )}
     <div className='relative flex space-x-3'>
       <div>
-        <div className='bg-[#00ADB9] rounded-[14px] w-10 h-10'></div>
+        <div className='bg-[#00ADB9] rounded-[14px] w-10 h-10'>
+          <img src="{}" alt="SVG"/>
+        </div>
       </div>
       <div className='min-w-0 flex-1 pt-1.5 flex flex-col space-x-4'>
         <div>
@@ -23,7 +25,7 @@ const TimelineItem = ({ title, timestamp, isFirst, isLast }) => (
 );
 
 interface Iitems {
-  items: { title: string; timestamp: string }[];
+  items: { title: string; timestamp: string;  }[];
 }
 
 const Timeline = ({ items }: Iitems) => {
@@ -54,6 +56,7 @@ const Timeline = ({ items }: Iitems) => {
 const App = () => {
   const timelineData = [
     {
+      
       title: 'Order Received',
       timestamp: '03/03/2024 5:23 pm',
     },

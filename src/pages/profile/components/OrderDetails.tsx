@@ -64,55 +64,55 @@ const OrderDetails = ({ setShowOrderDetails }: OrderDetailsProps) => {
         <div className='w-[75%]'>
           <div className='flex justify-between w-full pl-4'>
             <div>
-              <p className='font-bold text-xl mb-2'>Order</p>
-              <p className='font-bold text-xl mb-2'>{orderDetails.orderID}</p>
+              <p className='font-bold text-xl mb-2'>Order {orderDetails.orderID}</p>
             </div>
+            <div className='rounded-[26px] px-6 py-[8px]  text-white bg-[#53AFBE] text-xs items-center justify-end'>completed</div>
           </div>
-          <div className='flex justify-between w-full pl-4 mt-10'>
-            <p className='font-medium'>{orderDetails.type}</p>
-            <p className='font-medium'>x 7 portions</p>
+          <div className='flex justify-between mt-5 w-full pl-4 '>
+            <p className='text-xl font-semibold'>{orderDetails.type}</p>
+            <p className='font-semibold mr-2'>x 7 portions</p>
           </div>
         </div>
       </div>
 
       <div className='flex'>
         <div className='w-[30%]'>
-          <p className='text-gray-600 text-sm mb-2'>Order placed in</p>
-          <p className='text-[14px]'>{orderDetails.orderPlacedOn}</p>
+          <p className='text-[#525252] text-sm mb-2'>Order placed in</p>
+          <p className='text-[14px] font-medium text-[#000000]'>{orderDetails.orderPlacedOn}</p>
         </div>
         <div className='w-[30%]'>
-          <p className='text-gray-600 text-sm mb-2'>Perform by</p>
-          <p className='text-[14px]'>{orderDetails.performBy}</p>
+          <p className='text-[#525252] text-sm mb-2'>Perform by</p>
+          <p className='text-[14px] font-medium text-[#000000]'>{orderDetails.performBy}</p>
         </div>
         <div className='w-[40%]'>
-          <p className='text-gray-600 text-sm mb-2'>Location of Qurban</p>
-          <p className='text-[14px]'>{orderDetails.location}</p>
+          <p className='text-[#525252] text-sm mb-2'>Location of Qurban</p>
+          <p className='text-[14px] font-medium text-[#000000]'>{orderDetails.location}</p>
         </div>
       </div>
 
       <div className='flex mt-8 items-center'>
         <div className='w-[30%]'>
-          <p className='text-gray-600 text-sm mb-2'>Price</p>
-          <p className='text-[14px]'> {orderDetails.price}</p>
+          <p className='text-[#525252] text-sm mb-2'>Price</p>
+          <p className='text-[14px] font-medium text-[#000000]'> {orderDetails.price}</p>
         </div>
         <div className='w-[30%]'>
-          <p className='text-gray-600 text-sm mb-2'>Status of payment</p>
-          <p className='text-[14px]'>{orderDetails.status}</p>
+          <p className='text-[#525252] text-sm mb-2'>Status of payment</p>
+          <p className='text-[14px] font-medium text-[#000000]'>{orderDetails.status}</p>
         </div>
         <div className='w-[40%]'>
-          <p className='text-gray-600 text-sm mb-4'>Payment method</p>
-          <p className='text-[14px]'>{orderDetails.paymentMethod}</p>
+          <p className='text-[#525252] text-sm mb-4'>Payment method</p>
+          <p className='text-[14px] font-medium text-[#000000]'>{orderDetails.paymentMethod}</p>
         </div>
       </div>
 
       <div className='mt-4'>
-        <p className='text-[#00ADB9] text-[14px] cursor-pointer'>
+        <p className='text-[#00ADB9] text-[14px] cursor-pointer text-base font-medium'>
           Download E-Certificate
         </p>
       </div>
 
-      <Tabs style='underline' className='mt-10'>
-        <Tabs.Item active title='Order Timeline'>
+      <Tabs style='underline' className='mt-10 '>
+        <Tabs.Item active title='Order Timeline' className='text-[#000000]'>
           <div className='mb-6 mt-8'>
             <h3 className='text-xl font-bold text-gray-700 mb-2'>
               Order Timeline
@@ -123,14 +123,14 @@ const OrderDetails = ({ setShowOrderDetails }: OrderDetailsProps) => {
         <Tabs.Item title='Particiapnts'>
           <div className='overflow-x-auto'>
             <table className='table-auto w-full'>
-              <thead className='bg-[#EFEFEF]'>
-                <tr>
-                  <th className='px-4 py-2 text-left text-gray-600'>No.</th>
+              <thead className='bg-[#EFEFEF]  rounded-[5px]'>
+                <tr> 
+                  <th className='px-4 py-2 text-left text-gray-600 rounded-[5px]'>No.</th>
                   <th className='px-4 py-2 text-left text-gray-600'>Name</th>
-                  <th className='px-4 py-2 text-left text-gray-600'>
+                  <th className='px-4 py-2 text-left text-gray-600 '>
                     IC Number
                   </th>
-                  <th className='px-4 py-2 text-left text-gray-600'>
+                  <th className='px-4 py-2 text-left text-gray-600 rounded-[5px]'>
                     Quantity
                   </th>
                 </tr>

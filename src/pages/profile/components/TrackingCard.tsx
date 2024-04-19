@@ -11,7 +11,7 @@ const TrackingCard = ({ setShowOrderDetails, ongoing }: trackingCardProps) => {
             <div className="flex justify-between">
                 <div className="flex gap-2 items-center">
                     <span className="font-bold text-[20px]">XK3-6J</span>
-                    <div className="w-0 h-[44px] border-r-solid border-r border-r-black"></div>
+                    <div className="w-0 h-[44px] border-r-solid border-r-[1.5px] border-r-black"></div>
                     <span className="font-bold text-[20px]">Aqiqah Goat / Whole</span>
                 </div>
                 <div className="flex gap-4 items-center">
