@@ -11,11 +11,11 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className='text-center mt-[13.063rem]'>
-        <h3 className='xl:text-[4rem] lg:text-4xl text-3xl text-[#084059] font-bold'>
+      <div className='text-center 2xl:mt-[13.063rem] xl:mt-[11rem] lg:mt-40 mt-[8.688rem]'>
+        <h3 className='xl:text-[4rem] lg:text-[2.813rem] text-[1.625rem] text-[#084059] font-bold'>
           Choose A Package
         </h3>
-        <p className='text-[1.5rem] text-[#000000] font-light mt-[1.438rem]'>
+        <p className='2xl:text-[1.5rem] xl:text-[1.5rem] lg:text-base text-sm text-[#000000] font-light mt-[1.438rem]'>
           Available Payment Methods
         </p>
         <div className='justify-center items-center flex'>
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='flex justify-center items-center flex-col xl:gap-8 mt-[7.313rem] xl:flex-row p-4'>
+      <div className='flex justify-center items-center flex-col xl:gap-8 mt-[7.313rem] xl:flex-row lg:gap-6 lg:flex-row p-4'>
         <PriceCard />
         <PriceCard />
       </div>
@@ -36,22 +36,23 @@ const Home = () => {
         />
       </div>
 
-      <Support />
+      <Support /> 
 
       <section className='max-w-[75.5rem] mx-auto my-[7.8rem] flex flex-col gap-[180px]'>
         <Timer countDownDays={4} />
         <UserJourney />
       </section>
-      <QurbanServiceBanner />
-      <div className='mt-[15.625rem]'>
+
+      {/* <QurbanServiceBanner /> */}
+      {/* <div className='mt-[15.625rem]'>
         <Trust />
-      </div>
+      </div> */}
 
-      <div className='mt-[3.375rem]'>
+      {/* <div className='mt-[3.375rem]'>
         <Services />
-      </div>
+      </div> */}
 
-      <div className='mt-[22.125rem]'>
+      {/* <div className='mt-[22.125rem]'>
         <h2 className='font-bold text-center xl:text-[4rem] lg:text-4xl text-3xl text-[#084059]'>
           In Collaboration With
         </h2>
@@ -62,8 +63,8 @@ const Home = () => {
           <img src='haji.svg' alt='' />
           <img src='ppz-.svg' alt='' />
         </div>
-      </div>
-      <div className='mt-[18.625rem]'>{/* <QuestionForm /> */}</div>
+      </div> */}
+      {/* <div className='mt-[18.625rem]'><QuestionForm /></div> */}
     </>
   );
 };

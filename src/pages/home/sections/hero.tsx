@@ -9,7 +9,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     appendDots: (dots: any) => (
       <div>
         <ul style={{ margin: '-20px' }}> {dots} </ul>
@@ -33,25 +33,25 @@ const Hero = () => {
       <div className='w-full'>
         <Slider {...settings}>
           <div className='text-[background: #084059] text-center' key={0}>
-            <h1 className='font-bold xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl text-[#084059]'
+            <h1 className='font-bold xl:text-8xl lg:text-[4rem] text-5xl  text-[#084059]'
             style={{ fontFamily: 'Glacial Indifference'}}
             >
               QURBAN & AQIQAH
             </h1>
-            <h2 className='xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-white font-bold mt-2 '
+            <h2 className='xl:text-[5.25rem] lg:text-[4rem] text-[2.5rem] text-white font-bold mt-2 '
             style={{fontFamily: 'Nourd-Bold'}}
             >
               Now Easier
             </h2>
             <div className='mt-8 max-w-[38rem] mx-auto'>
-              <p className=' text-center text-[#0F405A] xl:text-[1.688rem] lg:text-3xl md:text-3xl text-2xl font-light '
+              <p className=' text-center text-[#0F405A] 2xl:px-0 xl:px-0 lg:px-0 px-8 xl:text-[1.688rem] lg:text-xl  text-sm font-light '
               style={{fontFamily: 'Nourd-Light'}}
               >
                 Distribute the meat to our brothers in need in 41 countries
               </p>
             </div>
             <div className='mt-[2.7rem] flex gap-4 justify-center'>
-              <Button size='lg'>Sign Up Now </Button>
+              <Button size='sm'>Sign Up Now </Button>
             </div>
           </div>
           <div className='text-[background: #084059] text-center' key={1}>
@@ -62,7 +62,7 @@ const Hero = () => {
               Now Easier
             </h2>
             <div className='mt-8 max-w-[38rem] mx-auto'>
-              <p className=' text-[#0F405A] xl:text-3xl lg:text-3xl md:text-3xl text-2xl font-light'>
+              <p className=' text-[#0F405A] 2xl:px-0 xl:px-0 lg:px-0 px-8 xl:text-3xl lg:text-3xl md:text-3xl text-2xl font-light'>
                 Distribute the meat to our brothers in need in 41 countries
               </p>
             </div>
