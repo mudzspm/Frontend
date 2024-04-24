@@ -1,7 +1,28 @@
+import { AuthAPI } from '@/api/auth';
+import { signupDto } from '@/api/dtos/auth';
 import { Button } from '@/components/ui/button';
+import { useFormik } from 'formik';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+
+  const formik = useFormik({
+    initialValues: {
+      fullname: '',
+      email: '',
+      phone_no: '',
+      ic_number: '',
+      password: ''
+    },
+    onSubmit: async () => {
+    }
+  });
+
+  const submitHandler = async (values: signupDto) => {
+    const response = await AuthAPI.signup(values)
+    console.log(response);
+  }
+
   return (
     <>
       <section className='grid grid-cols-2 gap-2 h-[100dvh] overflow-hidden'>
@@ -47,7 +68,9 @@ const Register = () => {
               className=' text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
               placeholder='Katijah Binti Mohd Amin'
-              value=''
+              value={formik.values.fullname}
+              onChange={(e) => formik.handleChange(e)}
+              name='fullname'
             />
             <button
               type='button'
@@ -83,7 +106,9 @@ const Register = () => {
                   type='email'
                   className=' text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='Katijah Binti Mohd Amin'
-                  value=''
+                  value={formik.values.email}
+                  onChange={(e) => formik.handleChange(e)}
+                  name='email'
                 />
                 <button
                   type='button'
@@ -120,7 +145,9 @@ const Register = () => {
                   type='number'
                   className=' text-sm  bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='12345678901'
-                  value=''
+                  value={formik.values.ic_number}
+                  onChange={(e) => formik.handleChange(e)}
+                  name='ic_number'
                 />
               </div>
             </div>
@@ -136,7 +163,9 @@ const Register = () => {
                   type='text'
                   className=' text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='0193456789'
-                  value=''
+                  value={formik.values.phone_no}
+                  onChange={(e) => formik.handleChange(e)}
+                  name='phone_no'
                 />
                 <button
                   type='button'
@@ -173,7 +202,9 @@ const Register = () => {
                   className=' text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='Enter password'
-                  value=''
+                  value={formik.values.password}
+                  onChange={(e) => formik.handleChange(e)}
+                  name='password'
                 />
                 <button
                   type='button'
@@ -208,6 +239,7 @@ const Register = () => {
                 backgroundImage:
                   'linear-gradient(180deg, #00ADB9 -305.94%, #084059 730.63%)',
               }}
+              onClick={() => submitHandler(formik.values)}
             >
               Create Account
             </Button>
