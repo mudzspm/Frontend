@@ -40,30 +40,30 @@ const Home = () => {
 
       <section className='max-w-[75.5rem] mx-auto my-[7.8rem] flex flex-col gap-[180px]'>
         <Timer countDownDays={4} />
-        <UserJourney />
+        <UserJourney  />
       </section>
 
-      {/* <QurbanServiceBanner /> */}
-      {/* <div className='mt-[15.625rem]'>
+      <QurbanServiceBanner />
+      <div className='xl:mt-[15.625rem] lg:mt-[10rem] mt-[6.188rem]'>
         <Trust />
-      </div> */}
+      </div>
 
-      {/* <div className='mt-[3.375rem]'>
+      <div className='mt-[3.375rem]'>
         <Services />
-      </div> */}
+      </div>
 
-      {/* <div className='mt-[22.125rem]'>
-        <h2 className='font-bold text-center xl:text-[4rem] lg:text-4xl text-3xl text-[#084059]'>
+      <div className='xl:mt-[22.125rem] lg:mt-56 mt-36 xl:mb-[20rem] lg:mb-[17rem] mb-[12rem]'>
+        <h2 className='font-bold text-center xl:text-[4rem] lg:text-5xl text-xl text-[#084059]'>
           In Collaboration With
         </h2>
-        <div className='bg-[#EDECEC] flex justify-center xl:flex-row flex-col  p-[6.813rem] gap-[2.625rem] mt-[3rem]'>
-          <img src='ilum.svg' alt='' />
-          <img src='upm.svg' alt='' />
-          <img src='ppz.svg' alt='' />
-          <img src='haji.svg' alt='' />
-          <img src='ppz-.svg' alt='' />
+        <div className='bg-[#EDECEC] flex justify-center flex-wrap  xl:p-[6.813rem]  p-[3rem] gap-[2.625rem] mt-[3rem]'>
+          <img src='ilum.svg' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='upm.svg' alt='UPM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='ppz.svg' alt='PPZ'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='haji.svg' alt='HAJI'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='ppz-.svg' alt='PPZ'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
         </div>
-      </div> */}
+      </div>
       {/* <div className='mt-[18.625rem]'><QuestionForm /></div> */}
     </>
   );

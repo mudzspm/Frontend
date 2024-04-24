@@ -1,10 +1,10 @@
 const Services = () => {
   return (
     <>
-      <p className='text-center text-[#000000s] xl:text-[2rem] text-lg '>
+      <p className='text-center text-[#000000s] xl:text-[2rem] text-xl '>
         Why should you use our services?
       </p>
-      <div className='flex gap-[2.875rem] p-6 text-[1.25rem] justify-center xl:flex-row lg:flex-row flex-col mt-[4.625rem]'>
+      <div className='xl:flex lg:flex md:flex md:flex-wrap gap-[2.875rem] p-6 text-[1.25rem] justify-center xl:flex-row lg:flex-row grid grid-cols-2 mt-[4.625rem]'>
         <div>
           <div className='xl:border-r-2  '>
             <img src='map.svg' alt='Map' className='max-w-full m-auto xl:p-5' />

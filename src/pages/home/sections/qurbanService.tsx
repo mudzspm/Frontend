@@ -6,10 +6,10 @@ const QurbanServiceBanner = () => {
         alt='Aqiqah'
         className='absolute mix-blend-overlay bg-no-repeat bg-cover object-cover h-full w-full top-0 '
       />
-      <h2 className='text-[#FFFFFF] xl:text-[4rem] lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-semibold '>
+      <h2 className='text-[#FFFFFF] xl:text-[4rem] lg:text-4xl text-2xl font-semibold '>
         Borderless Aqiqah & Qurban
       </h2>
-    </div>
+    </div>  
   );
 };
 

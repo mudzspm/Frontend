@@ -1,16 +1,16 @@
 const Trust = () => {
   return (
-    <section className=' mt-5 text-center p-4 2xl:px-52 xl:px-32 lg:px-24 md:px-12 '>
+    <section className='text-center xl:p-4 lg:p-4 md:p-6 p-8 2xl:px-52 xl:px-32 lg:px-24 md:px-12 '>
       <div className='mb-14'>
-        <h2 className='mt-10 xl:text-6xl lg:text-5xl text-4xl text-[#084059] font-bold'>
+        <h2 className='mt-10 xl:text-[4rem] lg:text-[2.5rem] text-[2rem] text-[#084059] font-bold'>
           Trusted by Over{' '}
-          <span className='text-[#00ADB9] xl:text-6xl lg:text-5xl md:text-4xl text-2xl'>
+          <span className='text-[#00ADB9] xl:text-[4rem] lg:text-[2.5rem] text-[2rem]'>
             {' '}
             4000,000{' '}
           </span>
           Malaysians
         </h2>
-        <p className='text-3xl text-[#000000] font-medium mt-2.5'>
+        <p className='xl:text-[2rem] lg:text-2xl text-base text-[#000000] font-medium mt-2.5'>
           16 years of continuously facilitating the implementation of your
           Qurban and Aqiqah
         </p>
