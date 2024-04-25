@@ -1,12 +1,15 @@
 import { Button } from './ui/button';
+interface SupportCardProps {
+  image: string;
+}
 
 function PortionCard() {
   return    (                                                                                           
-    <div className='flex flex-col gap-[15px] max-w-[18.95rem] py-5 px-[18px] border-[1px] border-[#A7E0EA] rounded-[10px] hover:shadow-[0px_10px_21px_0px_rgba(0,0,0,0.25)] transition-all'>
+    <div className='flex flex-col  gap-[15px] max-w-[18.95rem] py-5 px-[18px] border-[1px] border-[#A7E0EA] rounded-[10px] hover:shadow-[0px_10px_21px_0px_rgba(0,0,0,0.25)] transition-all'>
       <div className='flex gap-[15px]'>
         <img src='dummyImage.png' alt='cow' />
         <div className='flex flex-col gap-1'>
-          <p className='text-2xl font-semibold text-[#000]'>Cattle / Portion</p>
+          <p className='xl:text-2xl lg:text-xl text-[0.625rem] font-semibold text-[#000]'>Cattle / Portion</p>
           <p className='flex gap-[6px]'>
             <img
               src='location.svg'
@@ -15,16 +18,15 @@ function PortionCard() {
               height={13}
               alt='location'
             />
-            <span className='block text-xs text-[#969696]'>Kandang A</span>
+            <span className='block xl:text-xs lg:text-xs text-[0.563rem]  text-[#969696]'>Kandang A</span>
           </p>
         </div>
       </div>
-      <p className='text-xs font-light text-[#969696]'>
-        (Whole) Can be shared by 7 people with different niat. (Portion) Minimum
-        one portion for one person.
+      <p className='xl:text-xs lg:text-xs text-[0.563rem]  font-light text-[#969696]'>
+      (Portion) Minimum one portion for one person.
       </p>
       <p className='text-xs'>
-        <strong className='text-base text-[#000]'>RM 450</strong> per portion
+        <strong className='xl:text-base lg:text-base text-xs text-[#000]'>RM 450</strong> per portion
       </p>
       <div className='flex p-2 rounded-[5px] border-[1px] items-center justify-between hover:border-[#53AFBE] hover:text-[#084059]'>
         <div className='flex items-center gap-2'>
@@ -48,10 +50,10 @@ function PortionCard() {
             </span>
           </Button>
         </div>
-        <p className='font-semibold text-2xl text-[#53AFBE] '>RM 450</p>
+        <p className='font-semibold xl:text-2xl lg:text-xl text-xs text-[#53AFBE] '>RM 450</p>
       </div>
 
-      <Button size='sm' variant='outline' className='text-xl'>
+      <Button size='sm' variant='outline' className='xl:text-xl lg:text-base text-xs'>
         Add to cart
       </Button>
     </div>

@@ -5,6 +5,7 @@ function Qurban() {
     <div>
       <TimerSection />
       <QurbanSection />
+      
     </div>
   );
 }
