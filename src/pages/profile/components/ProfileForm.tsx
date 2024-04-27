@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 type profileFormProps = {
     profileData: userProfile,
-    setProfile: React.Dispatch<React.SetStateAction<userProfile>>
+    setProfile: (arg: any) => void
 }
 
 const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
@@ -71,25 +71,13 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                     <div className='mb-2'>
                         <TextInput
                             aria-label='line 1'
-                            value={profileData.userData?.address?.line1}
+                            value={profileData.userData?.address}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                setProfile({ userData: { ...profileData.userData, address: { ...profileData?.userData?.address, line1: e.target.value } }, favoriteParticipants: profileData.favoriteParticipants })
+                                setProfile({ userData: { ...profileData.userData, address: e.target.value  }, favoriteParticipants: profileData.favoriteParticipants })
                             }
                             }
                             disabled={!userDataEdit}
                         />
-                    </div>
-                    <div>
-                        <TextInput
-                            aria-label='line 2'
-                            value={profileData.userData?.address?.line2}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                setProfile({ userData: { ...profileData.userData, address: { ...profileData?.userData?.address, line2: e.target.value } }, favoriteParticipants: profileData.favoriteParticipants })
-                            }
-                            }
-                            disabled={!userDataEdit}
-                        />
-
                     </div>
                 </div>
                 <div className='flex'>
@@ -99,18 +87,6 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                             value={profileData.userData?.phone}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                                 setProfile({ userData: { ...profileData.userData, phone: e.target.value }, favoriteParticipants: profileData.favoriteParticipants })
-                            }
-                            }
-                            disabled={!userDataEdit}
-                        />
-                    </div>
-                    <div className='w-[30%]'>
-                        <label className='text-[12px] font-semibold'>Password</label>
-                        <TextInput
-                            type='password'
-                            value={profileData.userData?.password}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                setProfile({ userData: { ...profileData.userData, password: e.target.value }, favoriteParticipants: profileData.favoriteParticipants })
                             }
                             }
                             disabled={!userDataEdit}
@@ -128,7 +104,7 @@ const ProfileForm = ({ profileData, setProfile }: profileFormProps) => {
                     <hr className='mt-2' />
                 </div>
                 <div className='mt-4'>
-                    {profileData?.favoriteParticipants.map((participant, index) => {
+                    {profileData?.favoriteParticipants?.length > 0 && profileData?.favoriteParticipants?.map((participant, index) => {
                         return (
                             <div className='flex mb-4' key={index}>
                                 <div className='w-[60%] mr-[3%]'>

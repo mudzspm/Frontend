@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { Dropdown, Navbar, Sidebar, CustomFlowbiteTheme } from 'flowbite-react';
 import { useState } from 'react';
 import { Button } from './button';
+import { isAuthenticated } from '@/lib/utils';
+import { toast } from 'react-toastify';
 
 const customSideBar: CustomFlowbiteTheme['sidebar'] = {
   root: {
@@ -23,14 +25,15 @@ function NavigationBar() {
 
   const handleSideBar = () => setShow((prev) => !prev);
 
+  const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {}
+
   return (
     <>
       <header
-        className={`${
-          show
-            ? "before:opacity-25 before:content-[''] before:absolute before:bg-black before:w-full before:h-screen"
-            : ''
-        } shadow-lg right-0 bg-white dark:bg-gray-900 sticky w-full z-20  start-0 border-b border-gray-200 dark:border-gray-600 top-0`}
+        className={`${show
+          ? "before:opacity-25 before:content-[''] before:absolute before:bg-black before:w-full before:h-screen"
+          : ''
+          } shadow-lg right-0 bg-white dark:bg-gray-900 sticky w-full z-20  start-0 border-b border-gray-200 dark:border-gray-600 top-0`}
       >
         <div className='bg-[#0F405A] p-[5px] text-white hidden lg:block'>
           <div className='max-w-[71.3rem] mx-auto flex text-base font-normal 2xl:justify-between md:justify-around'>
@@ -92,20 +95,43 @@ function NavigationBar() {
               }
               className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
             >
-              <Link to='/signup'>
-                <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
-                  <Button className='bg-[#084059] hover:bg-[#084059]'>
-                    Sign Up
-                  </Button>
+              {isAuthenticated() ? <>
+                <Dropdown.Item className='hover:text-[#00ADB9] text-sm font-bold'>
+                  {user.fullname}
                 </Dropdown.Item>
-              </Link>
-              <Link to='/signin'>
-                <Dropdown.Item className=' hover:bg-transparent hover:text-[#00ADB9] text-xl font-normal w-full'>
-                  <Button className='bg-[#A7E0EA] hover:bg-[#A7E0EA]'>
-                    Sign In
-                  </Button>
+                <Dropdown.Item className='hover:text-[#00ADB9] text-sm font-bold'>
+                  {user.email}
                 </Dropdown.Item>
-              </Link>
+                <Link to='/signin'>
+                  <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
+                    <Button
+                      className='bg-[#084059] hover:bg-[#084059]'
+                      onClick={() => {
+                        localStorage.removeItem('authToken')
+                        localStorage.removeItem('user')
+                        toast.success('Logged out successfully')
+                      }}>
+                      Logout
+                    </Button>
+                  </Dropdown.Item>
+                </Link>
+              </> :
+                <>
+                  <Link to='/signup'>
+                    <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal'>
+                      <Button className='bg-[#084059] hover:bg-[#084059]'>
+                        Sign Up
+                      </Button>
+                    </Dropdown.Item>
+                  </Link>
+                  <Link to='/signin'>
+                    <Dropdown.Item className=' hover:bg-transparent hover:text-[#00ADB9] text-xl font-normal w-full'>
+                      <Button className='bg-[#A7E0EA] hover:bg-[#A7E0EA]'>
+                        Sign In
+                      </Button>
+                    </Dropdown.Item>
+                  </Link>
+                </>}
             </Dropdown>
 
             <button
@@ -204,9 +230,8 @@ function NavigationBar() {
       <div
         id='drawer-backdrop'
         data-drawer-backdrop='true'
-        className={` bg-transparent fixed bottom-0 w-72 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 transform ${
-          show ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={` bg-transparent fixed bottom-0 w-72 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 transform ${show ? 'translate-x-0' : 'translate-x-full'
+          }`}
         aria-labelledby='drawer-bottom-label'
       >
         <button

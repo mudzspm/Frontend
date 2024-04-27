@@ -1,7 +1,54 @@
+import { AuthAPI } from '@/api/auth';
+import { signupDto } from '@/api/dtos/auth';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { Link, useNavigate } from 'react-router-dom';
+
+import RegisterValidationSchema from './validationSchemas/register'
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import Loader from '@/components/Loader';
 
 const Register = () => {
+  const [loading, setLoading] = useState(false);
+
+  const navigation = useNavigate();
+  const formik = useFormik({
+    initialValues: {
+      fullname: '',
+      email: '',
+      phone_no: '',
+      ic_number: '',
+      password: ''
+    },
+    validationSchema: RegisterValidationSchema,
+    validateOnMount: true,
+    validateOnBlur: true,
+    onSubmit: async () => {
+    }
+  });
+
+  const submitHandler = async (values: signupDto) => {
+    setLoading(true)
+    try {
+      const response = await AuthAPI.signup(values)
+      if (response.data) {
+        const data = response.data;
+        console.log(response.token, 'token')
+        localStorage.setItem('user', JSON.stringify(data))
+        localStorage.setItem('authToken', response.token)
+        toast.success('User signed up successfully!')
+        navigation('/profile')
+      }
+    }
+    catch (e) {
+      toast.error(e?.response?.data?.error)
+    }
+    finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <>
       <section className='grid grid-cols-2 gap-2 h-[100dvh] overflow-hidden'>
@@ -47,7 +94,10 @@ const Register = () => {
               className=' text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
               placeholder='Katijah Binti Mohd Amin'
-              value=''
+              value={formik.values.fullname}
+              onChange={(e) => formik.handleChange(e)}
+              name='fullname'
+              onBlur={() => formik.setTouched({ fullname: true, ...formik.touched })}
             />
             <button
               type='button'
@@ -75,6 +125,8 @@ const Register = () => {
             </button>
           </div>
 
+          {formik.errors['fullname'] && formik.touched.fullname && <div className='mt-2 mb-2 text-[#ED4337] text-xs'>{formik.errors.fullname}</div>}
+
           <div className='flex gap-5'>
             <div className='w-3/5'>
               <label className='block text-xs font-normal mt-6'>Email</label>
@@ -83,7 +135,10 @@ const Register = () => {
                   type='email'
                   className=' text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='Katijah Binti Mohd Amin'
-                  value=''
+                  value={formik.values.email}
+                  onChange={(e) => formik.handleChange(e)}
+                  onBlur={() => formik.setTouched({ email: true, ...formik.touched })}
+                  name='email'
                 />
                 <button
                   type='button'
@@ -110,6 +165,7 @@ const Register = () => {
                   </svg>
                 </button>
               </div>
+              {formik.errors['email'] && formik.touched.email && <div className='mt-2 mb-2 text-[#ED4337] text-xs'>{formik.errors.email}</div>}
             </div>
             <div className='w-2/5'>
               <label className='block text-xs font-normal mt-6'>
@@ -117,11 +173,15 @@ const Register = () => {
               </label>
               <div className='mt-2'>
                 <input
-                  type='number'
+                  type='text'
                   className=' text-sm  bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='12345678901'
-                  value=''
+                  value={formik.values.ic_number}
+                  onChange={(e) => formik.handleChange(e)}
+                  onBlur={() => formik.setTouched({ ic_number: true, ...formik.touched })}
+                  name='ic_number'
                 />
+                {formik.errors['ic_number'] && formik.touched.ic_number && <div className='mt-2 mb-2 text-[#ED4337] text-xs'>{formik.errors.ic_number}</div>}
               </div>
             </div>
           </div>
@@ -136,7 +196,9 @@ const Register = () => {
                   type='text'
                   className=' text-sm bg-[#F2F2F2] py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='0193456789'
-                  value=''
+                  value={formik.values.phone_no}
+                  onChange={(e) => formik.handleChange(e)}
+                  name='phone_no'
                 />
                 <button
                   type='button'
@@ -173,7 +235,9 @@ const Register = () => {
                   className=' text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-full h-[2.932rem] rounded-[0.438rem] border-none'
                   placeholder='Enter password'
-                  value=''
+                  value={formik.values.password}
+                  onChange={(e) => formik.handleChange(e)}
+                  name='password'
                 />
                 <button
                   type='button'
@@ -208,6 +272,8 @@ const Register = () => {
                 backgroundImage:
                   'linear-gradient(180deg, #00ADB9 -305.94%, #084059 730.63%)',
               }}
+              onClick={() => submitHandler(formik.values)}
+              disabled={Object.keys(formik.errors).length > 0}
             >
               Create Account
             </Button>
@@ -229,6 +295,8 @@ const Register = () => {
             </p>
           </div>
         </div>
+        {loading && <Loader loading={loading} />}
+        <ToastContainer />
       </section>
     </>
   );

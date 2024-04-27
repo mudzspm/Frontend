@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import profileIcon from './icons/profile.svg';
 import selectedProfileIcon from './icons/selectedProfile.svg';
 import trackingIcon from './icons/tracking.svg';
@@ -10,44 +10,39 @@ import selectedHelpLine from './icons/selectedHelpLine.svg'
 import policy from './icons/policy.svg';
 import selectedPolicy from './icons/selectedPolicy.svg';
 import ProfileForm from './components/ProfileForm';
-import { userProfile } from './types';
 import Tracking from './components/Tracking';
 import Transaction from './components/Transaction';
 import Policy from './components/Policy';
 import HelpLine from './components/HelpLine';
-
-const exampleUser: userProfile = {
-    userData: {
-        name: 'KHADIJAH BINTI MOHD AMIM',
-        email: 'Khadijahamim@gmail.com',
-        icNumber: '012345678901',
-        address: {
-            line1: 'Khadijahamim@gmail.com',
-            line2: 'Khadijahamim@gmail.com'
-        },
-        phone: '0193456789',
-        password: 'test'
-    },
-    favoriteParticipants: [
-        {
-            name: 'IZZAH BINTI ZAINUDDIN',
-            icNumber: '012345678901'
-        },
-        {
-            name: 'KASYI KALISHA BINTI KHAIRUDDIN',
-            icNumber: '012345678901'
-        },
-        {
-            name: 'AUNI AMANI BINTI KALIZAN',
-            icNumber: '012345678901'
-        }
-    ]
-}
+import { UsersAPI } from '@/api/user';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const Profile = () => {
     const [selected, setSelected] = useState(0);
-    const [user, setUser] = useState(exampleUser)
+    const [user, setUser] = useState({ userData: { name: '', email: '', address: '', phone: '', icNumber: '' }, favoriteParticipants: [] })
 
+    const fetchUser = async () => {
+        const response = await UsersAPI.getUser()
+        if (response.data.data) {
+            const data = response.data.data;
+            setUser({
+                userData: {
+                    name: data.fullname,
+                    email: data.email,
+                    icNumber: data.ic_number,
+                    address: data.address,
+                    phone: data.phone_no,
+                },
+                favoriteParticipants: data.FamilyMembers?.length > 0 ? data.FamilyMembers?.map((mem) => ({ name: mem.fullname, icNumber: mem.ic_number })) : []
+            });
+        }
+    }
+
+    useEffect(() => {
+        fetchUser()
+    }, [])
+    
     const tabClassName = (index: number) => `flex gap-2 p-3 cursor-pointer text-[14px] min-w-250px ${selected == index ? 'bg-[#00ADB9] text-[#fff] rounded-[6px]' : 'bg-#fff text-[#525252BF]'}`
 
     return (
@@ -85,6 +80,7 @@ const Profile = () => {
                 {selected == 3 && <Policy />}
                 {selected == 4 && <HelpLine />}
             </div>
+            <ToastContainer />
         </section>
     );
 };

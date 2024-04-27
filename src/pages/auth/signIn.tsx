@@ -1,8 +1,50 @@
+import { AuthAPI } from '@/api/auth';
+import { loginDto } from '@/api/dtos/auth';
+import Loader from '@/components/Loader';
 import { Button } from '@/components/ui/button';
+import { useFormik } from 'formik';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import LoginValidationSchema from './validationSchemas/login'
+
 const SignIn = () => {
   const navigation = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: ''
+    },
+    validateOnMount: true,
+    validateOnBlur: true,
+    validationSchema: LoginValidationSchema,
+    onSubmit: async () => {
+    }
+  });
+
+  const submitHandler = async (values: loginDto) => {
+    setLoading(true)
+    try {
+      const response = await AuthAPI.login(values)
+      if (response.data?.token?.token) {
+        localStorage.setItem('authToken', response.data?.token?.token)
+        localStorage.setItem('user', JSON.stringify(response.data?.user))
+        navigation('/')
+        toast.success('Logged in successfully!')
+      }
+    }
+    catch (e) {
+      console.log(e.response.data?.error)
+      toast.error(e.response.data?.error)
+    }
+    finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <section className='grid grid-cols-2 gap-2 overflow-hidden h-[100dvh]'>
@@ -43,18 +85,23 @@ const SignIn = () => {
           name='email'
           placeholder='Email'
           type='text'
+          onChange={(e) => formik.handleChange(e)}
+          autoComplete='off'
+          value={formik.values.email}
           className='mt-2 bg-[#F2F2F2] 
 py-2.5 pr-2 pl-2.5 w-[22.625rem] h-[2.932rem] rounded-[0.438rem] border-none text-sm'
         />
         <p className='mt-4 text-xs text-[#000]'>Password</p>
         <div className='relative mt-2'>
           <input
-            id='hs-toggle-password'
             type='password'
             className=' text-sm disabled:opacity-50 disabled:pointer-events-none bg-[#F2F2F2] 
     py-2.5 pr-2 pl-2.5 w-[22.625rem] h-[2.932rem] rounded-[0.438rem] border-none'
             placeholder='Enter password'
-            value=''
+            onChange={(e) => formik.handleChange(e)}
+            value={formik.values.password}
+            name='password'
+            autoComplete='off'
           />
           <button
             type='button'
@@ -83,7 +130,7 @@ py-2.5 pr-2 pl-2.5 w-[22.625rem] h-[2.932rem] rounded-[0.438rem] border-none tex
         </div>
         <div className='mt-8'>
           <Button
-            onClick={() => navigation('/otp')}
+            onClick={() => submitHandler(formik.values)}
             size='xl'
             variant='login'
             style={{
@@ -111,6 +158,8 @@ py-2.5 pr-2 pl-2.5 w-[22.625rem] h-[2.932rem] rounded-[0.438rem] border-none tex
           </p>
         </div>
       </div>
+      {loading && <Loader loading={loading} />}
+      <ToastContainer />
     </section>
   );
 };

@@ -1,27 +1,13 @@
 export type userProfile = {
-    userData: {
+    userData?: {
         name: string,
         email: string,
         icNumber: string,
-        address: {
-            line1: string,
-            line2: string
-        },
+        address: string;
         phone: string,
-        password: string
     },
-    favoriteParticipants: [
-        {
-            name: string,
-            icNumber: string
-        },
-        {
-            name: string,
-            icNumber: string
-        },
-        {
-            name: string,
-            icNumber: string
-        }
-    ]
+    favoriteParticipants?: Array<{
+        name: string,
+        icNumber: string
+    }>
 }
