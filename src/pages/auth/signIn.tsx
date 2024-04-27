@@ -39,7 +39,7 @@ const SignIn = () => {
     }
     catch (e) {
       console.log(e.response.data?.error)
-      toast.error(e.response.data?.error)
+      toast.error(e.response.data?.error || e.response.data?.message)
     }
     finally {
       setLoading(false)
