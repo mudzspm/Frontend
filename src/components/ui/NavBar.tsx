@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Dropdown, Navbar, Sidebar, CustomFlowbiteTheme } from 'flowbite-react';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Button } from './button';
 import { isAuthenticated } from '@/lib/utils';
 import { toast } from 'react-toastify';
+import { AuthContext } from '@/context/auth';
 
 const customSideBar: CustomFlowbiteTheme['sidebar'] = {
   root: {
@@ -24,6 +25,8 @@ function NavigationBar() {
   const [show, setShow] = useState(false);
 
   const handleSideBar = () => setShow((prev) => !prev);
+
+  const { setToken } = useContext(AuthContext)
 
   const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {}
 
@@ -109,6 +112,7 @@ function NavigationBar() {
                       onClick={() => {
                         localStorage.removeItem('authToken')
                         localStorage.removeItem('user')
+                        setToken(null)
                         toast.success('Logged out successfully')
                       }}>
                       Logout
