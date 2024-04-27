@@ -13,6 +13,10 @@ import Profile from './pages/profile/profile.tsx';
 import SignIn from './pages/auth/signIn.tsx';
 import SignUp from './pages/auth/register.tsx';
 import OTP from './pages/auth/OTP.tsx';
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -61,5 +65,8 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />,
+  <>
+    <ToastContainer />
+    <RouterProvider router={router} />
+  </>,
 );

@@ -5,3 +5,8 @@ export type signupDto = {
     ic_number: string,
     password: string
 }
+
+export type loginDto = {
+    email: string,
+    password: string
+}
