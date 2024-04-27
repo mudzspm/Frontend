@@ -7,12 +7,15 @@ import FeedLot from './pages/Feedlot/feedlot.tsx';
 
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import Cart from './pages/cart/cart.tsx';
-// import SignIn from './pages/auth/signIn.tsx';
+
 import Profile from './pages/profile/profile.tsx';
 import SignIn from './pages/auth/signIn.tsx';
 import SignUp from './pages/auth/register.tsx';
 import OTP from './pages/auth/OTP.tsx';
+import Contactus from './pages/contactUs/contactUs.tsx';
+import AboutUs from './pages/aboutUs/aboutUs.tsx';
+import CartLogin from './pages/cartLogin/cartLogin.tsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -35,10 +38,18 @@ const router = createBrowserRouter([
         path: '/feedlot',
         element: <FeedLot />,
       },
-      // {
-      //   path: './cart',
-      //   element: <Cart />,
-      // },
+      {
+        path: '/contact',
+        element: <Contactus />,
+      },
+      {
+        path: '/about',
+        element: <AboutUs />,
+      },
+      {
+        path: '/cart',
+        element: <CartLogin />,
+      },
       {
         path: '/profile',
         element: <Profile />,

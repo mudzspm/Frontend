@@ -74,7 +74,7 @@ function NavigationBar() {
           </Link>
           <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-4'>
             <Link
-              to='#'
+              to='/cart'
               className='flex items-center space-x-3 rtl:space-x-reverse mr-5'
             >
               <img src='cart.svg' className='h-6 w-6' alt='digi cart' />
@@ -182,7 +182,7 @@ function NavigationBar() {
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
                 >
                   <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
-                    About Us
+                    <Link to='/about'>About Us</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
                     Yayasan Ar-Rahman
@@ -191,7 +191,7 @@ function NavigationBar() {
                     Institute Ar-Rahman
                   </Dropdown.Item>
                   <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
-                    Contact Us
+                    <Link to='/contact'>Contact Us</Link>
                   </Dropdown.Item>
                 </Dropdown>
               </Navbar.Collapse>

@@ -1,4 +1,6 @@
-const TimelineItem = ({ title, timestamp, isFirst, isLast }) => (
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-expect-error
+const TimelineItem = ({ title, timestamp, isLast }) => (
   <div className='relative pb-8'>
     {!isLast && (
       <span
@@ -40,6 +42,8 @@ const Timeline = ({ items }: Iitems) => {
                 key={index}
                 title={item?.title}
                 timestamp={item.timestamp}
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                //@ts-expect-error
                 isFirst={index === 0}
                 isLast={index === items.length - 1}
               />
