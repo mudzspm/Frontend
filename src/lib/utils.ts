@@ -7,5 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 
 export function isAuthenticated() {
   const authToken = localStorage.getItem('authToken')
-  return authToken;
+  if(authToken) return true;
+  return false
 }

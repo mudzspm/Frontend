@@ -3,16 +3,18 @@ import { loginDto } from '@/api/dtos/auth';
 import Loader from '@/components/Loader';
 import { Button } from '@/components/ui/button';
 import { useFormik } from 'formik';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import LoginValidationSchema from './validationSchemas/login'
+import { AuthContext } from '@/context/auth';
 
 const SignIn = () => {
   const navigation = useNavigate();
   const [loading, setLoading] = useState(false);
+  const { setToken } = useContext(AuthContext)
 
   const formik = useFormik({
     initialValues: {
@@ -33,13 +35,14 @@ const SignIn = () => {
       if (response.data?.token?.token) {
         localStorage.setItem('authToken', response.data?.token?.token)
         localStorage.setItem('user', JSON.stringify(response.data?.user))
+        setToken(response.data?.token?.token)
         navigation('/')
         toast.success('Logged in successfully!')
       }
     }
     catch (e) {
       console.log(e.response.data?.error)
-      toast.error(e.response.data?.error)
+      toast.error(e.response.data?.error || e.response.data?.message)
     }
     finally {
       setLoading(false)

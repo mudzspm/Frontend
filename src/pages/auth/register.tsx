@@ -5,12 +5,14 @@ import { useFormik } from 'formik';
 import { Link, useNavigate } from 'react-router-dom';
 
 import RegisterValidationSchema from './validationSchemas/register'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import Loader from '@/components/Loader';
+import { AuthContext } from '@/context/auth';
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
+  const { setToken } = useContext(AuthContext)
 
   const navigation = useNavigate();
   const formik = useFormik({
@@ -34,9 +36,9 @@ const Register = () => {
       const response = await AuthAPI.signup(values)
       if (response.data) {
         const data = response.data;
-        console.log(response.token, 'token')
         localStorage.setItem('user', JSON.stringify(data))
         localStorage.setItem('authToken', response.token)
+        setToken(response.token)
         toast.success('User signed up successfully!')
         navigation('/profile')
       }
