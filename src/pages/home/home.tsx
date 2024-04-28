@@ -5,7 +5,7 @@ import QurbanServiceBanner from '@/pages/home/sections/qurbanService';
 import Services from '@/pages/home/sections/services';
 import Timer from './sections/timer';
 import UserJourney from '@/components/UserJourney';
-import Trust from './sections/trust';
+// import Trust from './sections/trust';
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
       <Hero />
       <div className='text-center 2xl:mt-[13.063rem] xl:mt-[11rem] lg:mt-40 mt-[8.688rem]'>
         <h3 className='xl:text-[4rem] lg:text-[2.813rem] text-[1.625rem] text-[#084059] font-bold'>
-          Choose A Package
+        Pilih pakej qurban dan aqiqah anda.
         </h3>
         <p className='2xl:text-[1.5rem] xl:text-[1.5rem] lg:text-base text-sm text-[#000000] font-light mt-[1.438rem]'>
-          Available Payment Methods
+        Kaedah pembayaran yang disediakan
         </p>
         <div className='justify-center items-center flex'>
           <img src='visa.png' alt='Visa Chip' />
@@ -24,8 +24,8 @@ const Home = () => {
       </div>
 
       <div className='flex justify-center items-center flex-col xl:gap-8 mt-[7.313rem] xl:flex-row lg:gap-6 lg:flex-row p-4'>
-        <PriceCard />
-        <PriceCard />
+        <PriceCard price={"850"} price2={"5950"} img={"malaysia.png"}/>
+        <PriceCard price={"750"} price2={"5250"} img={"philp.png"}/>
       </div>
 
       <div className='relative mt-[13.375rem] h-[18.125rem] bg-[#00ADB9] py-[2rem]'>
@@ -45,7 +45,7 @@ const Home = () => {
 
       <QurbanServiceBanner />
       <div className='xl:mt-[15.625rem] lg:mt-[10rem] mt-[6.188rem]'>
-        <Trust />
+        {/* <Trust /> */}
       </div>
 
       <div className='mt-[3.375rem]'>
@@ -57,11 +57,11 @@ const Home = () => {
           In Collaboration With
         </h2>
         <div className='bg-[#EDECEC] flex justify-center flex-wrap  xl:p-[6.813rem]  p-[3rem] gap-[2.625rem] mt-[3rem]'>
-          <img src='ilum.svg' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
-          <img src='upm.svg' alt='UPM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
-          <img src='ppz.svg' alt='PPZ'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
-          <img src='haji.svg' alt='HAJI'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
-          <img src='ppz-.svg' alt='PPZ'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='0col.png' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='1col.png' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='2col.png' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='3col.png' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
+          <img src='4col.png' alt='IIUM'  className='xl:max-w-full lg:w-[128px] w-[60px]'/>
         </div>
       </div>
       {/* <div className='mt-[18.625rem]'><QuestionForm /></div> */}

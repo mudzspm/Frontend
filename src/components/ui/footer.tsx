@@ -94,7 +94,7 @@ function Footer() {
 </div>
 <div>
  <p className='text-center text-[#A3A3A3] font-normal xl:text-xl lg:text-sm text-[0.688rem]'>
- © All right reserved 2024 DigiQurban
+ © Hakmilik terpelihara 2024
  </p>
 </div>
 
@@ -115,6 +115,16 @@ function Footer() {
               <img src='twitter.svg' alt='twitter' />
             </a>
           </li>
+          <li>
+            <a href='#'>
+              <img src='tiktokb.svg' alt='tiktok' />
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              <img src='instab.svg' alt='instagram' />
+            </a>
+          </li>
         </ul>
 </div>
       </div>
@@ -125,27 +135,34 @@ function Footer() {
             <div className=''>
               <h2 className='xl:text-xl lg:text-base text-xs text-white font-bold'>Quick links</h2>
               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal xl:text-base text-sm'>
-                <li>About us</li>
+              <li>Tentang kami</li>
+                {/* <li>About us</li>
                 <li>Portfolio</li>
-                <li>Blog</li>
+                <li>Blog</li> */}
               </ul>
             </div>
             <div className=''>
               <h2 className='xl:text-xl lg:text-base text-xs text-white font-bold'>Explore</h2>
               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal xl:text-base text-sm'>
-                <li>Pages</li>
+                {/* <li>Pages</li>
                 <li>Events</li>
-                <li>Shop</li>
+                <li>Shop</li> */}
+              <li>Tentang kami</li>
+              <li>Produk kami</li>
+              <li>Berita dan peristiwa</li>
+              <li>Hubungi kami</li>
+
+
               </ul>
             </div>
-            <div className=''>
+            {/* <div className=''>
               <h2 className='xl:text-xl lg:text-base text-xs text-white font-bold '>Get in touch</h2>
               <ul className='flex flex-col text-[#A3A3A3] gap-[26px] font-normal xl:text-base text-sm'>
                 <li>Locations</li>
                 <li>Media</li>
                 <li>Contact us</li>
               </ul>
-            </div>
+            </div> */}
         </div>
             
  
@@ -153,8 +170,8 @@ function Footer() {
             <div className=' '>
               <div className='flex gap-2 xl:flex-col lg:flex-col md:flex-col mt-4'>
 
-              <Button size='sm'  variant='message'> Log in Breeder</Button>
-              <Button size='sm'  variant='message'> Log in Executor</Button>
+              <Button size='sm'  variant='message'> Daftar Pembekal</Button>
+              <Button size='sm'  variant='message'> Daftar Pelaksana</Button>
               </div>
               <ul className=' flex justify-between gap-3 text-[#A3A3A3] font-normal mt-[2.875rem] mb-5 xl:text-base text-sm'>
                 <li>Policies</li>

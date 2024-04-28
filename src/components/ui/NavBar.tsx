@@ -40,13 +40,13 @@ function NavigationBar() {
             </div>
             <div className='flex gap-1'>
               <a
-                href='mailto:info@digiqurban.org'
+                href='mailto:sales@dqurban.com'
                 className='border-r-[1px] border-[#8A8A8A] pr-3 inline-block'
               >
-                Email: info@digiqurban.org
+                Email: sales@dqurban.com
               </a>
-              <a href='tel:1-800-885-885' className='inline-block pl-3'>
-                Phone: 1-800-885-885
+              <a href='tel:+6011-3584-0500' className='inline-block pl-3'>
+                Phone: +6011-3584-0500
               </a>
             </div>
             <div className='flex gap-[18.8px]'>
@@ -60,6 +60,12 @@ function NavigationBar() {
                 </a>
                 <a href='#' className='inline-block'>
                   <img src='yt.svg' alt='facebook' />
+                </a>
+                <a href='#' className='inline-block'>
+                  <img src='instagramIcon.svg' alt='instaram' />
+                </a>
+                <a href='#' className='inline-block'>
+                  <img src='tiktokIcon.svg' alt='tiktok' />
                 </a>
               </div>
             </div>
@@ -106,6 +112,13 @@ function NavigationBar() {
                   </Button>
                 </Dropdown.Item>
               </Link>
+              <Link  to='/profile'>
+                <Dropdown.Item className=' hover:bg-transparent hover:text-[#00ADB9] text-xl font-normal w-full'>
+                  <Button className='bg-[#A7E0EA] hover:bg-[#A7E0EA]'>
+                  Profile
+                  </Button>
+                </Dropdown.Item>
+              </Link>
             </Dropdown>
 
             <button
@@ -144,18 +157,18 @@ function NavigationBar() {
                   className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
                   to='/'
                 >
-                  Home
+                  Lama Utama
                 </Link>
-                <Link
+                {/* <Link
                   className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
                   to='/profile'
                 >
                   Profile
-                </Link>
+                </Link> */}
                 <Dropdown
                   theme={customDropdown}
                   inline
-                  label={<p className='text-xl font-normal'>Packages</p>}
+                  label={<p className='text-xl font-normal'>Pakej</p>}
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
                 >
                   <Link to='/qurban'>
@@ -173,12 +186,12 @@ function NavigationBar() {
                   className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'
                   to='/feedlot'
                 >
-                  FeedLot
+                  Fidlot
                 </Link>
                 <Dropdown
                   theme={customDropdown}
                   inline
-                  label={<p className='text-xl font-normal'>Information</p>}
+                  label={<p className='text-xl font-normal'>Informasi</p>}
                   className='rounded-none rounded-b-lg border-none px-4 py-2 bg-[#f7f7f7]'
                 >
                   <Dropdown.Item className='hover:text-[#00ADB9] text-xl font-normal hover:bg-transparent'>
